@@ -5,11 +5,11 @@
     "@angular/common": "^12.0.0 || ^13.0.0",
     "@angular/core": "^12.0.0 || ^13.0.0",
     "@angular/platform-browser": "^12.0.0 || ^13.0.0",
-    "@sebgroup/chlorophyll": "^1.0.0",
+    "@sebgroup/chlorophyll": "1.0.0",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {
-    "@sebgroup/green-charts": "^1.0.0",
+    "@sebgroup/green-charts": "1.0.0",
     "tslib": "^2.3.1"
   },
   "description": "Angular charts wrapper built on top of @sebgroup/green-charts.",
