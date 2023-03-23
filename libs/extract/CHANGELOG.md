@@ -4,9 +4,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 # [1.3.0](https://github.com/splashdust/green/compare/@sebgroup/extract@1.2.0...@sebgroup/extract@1.3.0) (2023-03-22)
 
-
-### Features
-
 * more nonsense ([c900853](https://github.com/splashdust/green/commit/c900853e70c9bc64ad5d7e59a96f03b2e7a61fb6))
 * nonsense ([a454e3c](https://github.com/splashdust/green/commit/a454e3cc025dd560cff495a898e9d6dcbe95508f))
 

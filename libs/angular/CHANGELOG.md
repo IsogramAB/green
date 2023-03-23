@@ -41,7 +41,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 * 🎸 new slider component for react ([8ba92b9](https://github.com/splashdust/green/commit/8ba92b9e24f51450cc559c54503a0d29a1349f02))
 
 
-
 # [1.1.0](https://github.com/sebgroup/green/compare/@sebgroup/green-angular@1.0.4...@sebgroup/green-angular@1.1.0) (2023-03-16)
 
 
