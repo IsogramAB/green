@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.3.8](https://github.com/splashdust/green/compare/@sebgroup/green-react@1.3.7...@sebgroup/green-react@1.3.8) (2023-03-24)
+
+### Dependency Updates
+
+* `chlorophyll` updated to version `1.5.5`
+* `extract` updated to version `1.17.0`
+* `chlorophyll` updated to version `1.5.5`
+* `extract` updated to version `1.17.0`
+
+
 ## [1.3.7](https://github.com/splashdust/green/compare/@sebgroup/green-react@1.3.6...@sebgroup/green-react@1.3.7) (2023-03-24)
 
 ### Dependency Updates
