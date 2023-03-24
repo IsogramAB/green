@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.2.11](https://github.com/splashdust/green/compare/@sebgroup/green-angular@1.2.10...@sebgroup/green-angular@1.2.11) (2023-03-24)
+
+### Dependency Updates
+
+* `extract` updated to version `1.20.0`
+
+
 ## [1.2.10](https://github.com/splashdust/green/compare/@sebgroup/green-angular@1.2.9...@sebgroup/green-angular@1.2.10) (2023-03-24)
 
 ### Dependency Updates
