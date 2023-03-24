@@ -8,6 +8,19 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 ### Features
 
 * change index.ts ([17f9eda](https://github.com/splashdust/green/commit/17f9eda943ed6f42f14b946dd09b62b67d78fb46))
+* new change ([7a0b590](https://github.com/splashdust/green/commit/7a0b5908aecd001b9b7e7912ecd409689e2fb53e))
+* new change ([3a9ba2f](https://github.com/splashdust/green/commit/3a9ba2fc663eeb5a5fedea5f100d62a2f5a3d53f))
+* newstuff ([1ab30e8](https://github.com/splashdust/green/commit/1ab30e84a6e466874eea6a2390772a54dd919c42))
+* nonsense ([a454e3c](https://github.com/splashdust/green/commit/a454e3cc025dd560cff495a898e9d6dcbe95508f))
+
+
+
+# [1.3.0](https://github.com/splashdust/green/compare/@sebgroup/extract@1.2.0...@sebgroup/extract@1.3.0) (2023-03-24)
+
+
+### Features
+
+* change index.ts ([17f9eda](https://github.com/splashdust/green/commit/17f9eda943ed6f42f14b946dd09b62b67d78fb46))
 * new change ([3a9ba2f](https://github.com/splashdust/green/commit/3a9ba2fc663eeb5a5fedea5f100d62a2f5a3d53f))
 * newstuff ([1ab30e8](https://github.com/splashdust/green/commit/1ab30e84a6e466874eea6a2390772a54dd919c42))
 * nonsense ([a454e3c](https://github.com/splashdust/green/commit/a454e3cc025dd560cff495a898e9d6dcbe95508f))
