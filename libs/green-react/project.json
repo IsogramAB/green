@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "green-react",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/green-react/src",
   "projectType": "library",
@@ -74,7 +74,7 @@
       "options": {
         "commands": [
           {
-            "command": "NODE_ENV=production nx run react:build-nx-storybook"
+            "command": "NODE_ENV=production nx run green-react:build-nx-storybook"
           }
         ]
       }
@@ -84,7 +84,7 @@
       "options": {
         "commands": [
           {
-            "command": "nx run react:update-dependencies && nx run react:version"
+            "command": "nx run green-react:update-dependencies && nx run green-react:version"
           }
         ]
       }

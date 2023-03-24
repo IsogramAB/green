@@ -17,13 +17,13 @@ jobs:
               - libs/**
             chlorophyll:
               - libs/chlorophyll/**
-            react:
+            green-react:
               - libs/green-react/**
-            react-charts:
+            green-react-charts:
               - libs/green-react-charts/**
-            angular:
+            green-angular:
               - libs/green-angular/**
-            angular-charts:
+            green-angular-charts:
               - libs/green-angular-charts/**
 
   build:
@@ -40,13 +40,13 @@ jobs:
               - libs/**
             chlorophyll:
               - libs/chlorophyll/**
-            react:
+            green-react:
               - libs/green-react/**
-            react-charts:
+            green-react-charts:
               - libs/green-react-charts/**
-            angular:
+            green-angular:
               - libs/green-angular/**
-            angular-charts:
+            green-angular-charts:
               - libs/green-angular-charts/**
 
       - uses: actions/checkout@v2

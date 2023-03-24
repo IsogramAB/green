@@ -1,5 +1,5 @@
 {
-  "name": "react-charts",
+  "name": "green-react-charts",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/green-react-charts/src",
   "projectType": "library",
@@ -73,7 +73,7 @@
       "options": {
         "commands": [
           {
-            "command": "NODE_ENV=production nx run react-charts:build-nx-storybook"
+            "command": "NODE_ENV=production nx run green-react-charts:build-nx-storybook"
           }
         ]
       }
@@ -83,7 +83,7 @@
       "options": {
         "commands": [
           {
-            "command": "nx run react-charts:update-dependencies && nx run react-charts:version"
+            "command": "nx run green-react-charts:update-dependencies && nx run green-react-charts:version"
           }
         ]
       }

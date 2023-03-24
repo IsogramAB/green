@@ -1,5 +1,5 @@
 {
-  "name": "angular",
+  "name": "green-angular",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/green-angular/src",
@@ -77,7 +77,7 @@
       "options": {
         "commands": [
           {
-            "command": "nx run angular:update-dependencies && nx run angular:version"
+            "command": "nx run green-angular:update-dependencies && nx run green-angular:version"
           }
         ]
       }

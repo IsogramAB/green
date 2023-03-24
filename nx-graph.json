@@ -1089,7 +1089,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "nx run angular-charts:update-dependencies && nx run angular-charts:version"
+                    "command": "nx run green-angular-charts:update-dependencies && nx run green-angular-charts:version"
                   }
                 ]
               }
@@ -1678,7 +1678,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "NODE_ENV=production nx run react-charts:build-nx-storybook"
+                    "command": "NODE_ENV=production nx run green-react-charts:build-nx-storybook"
                   }
                 ]
               },
@@ -1689,7 +1689,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "nx run react-charts:update-dependencies && nx run react-charts:version"
+                    "command": "nx run green-react-charts:update-dependencies && nx run green-react-charts:version"
                   }
                 ]
               }
@@ -2904,7 +2904,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "nx run angular:update-dependencies && nx run angular:version"
+                    "command": "nx run green-angular:update-dependencies && nx run green-angular:version"
                   }
                 ]
               }
@@ -4325,9 +4325,9 @@
               "options": {
                 "outputPath": "dist/libs/green-charts",
                 "commands": [
-                  "nx run charts:build-lib",
-                  "nx run charts:compile-scss",
-                  "nx run charts:copy-scss"
+                  "nx run green-charts:build-lib",
+                  "nx run green-charts:compile-scss",
+                  "nx run green-charts:copy-scss"
                 ],
                 "parallel": false
               },
@@ -4415,7 +4415,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "nx run charts:update-dependencies && nx run charts:version"
+                    "command": "nx run green-charts:update-dependencies && nx run green-charts:version"
                   }
                 ]
               }
@@ -4678,7 +4678,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "NODE_ENV=production nx run react:build-nx-storybook"
+                    "command": "NODE_ENV=production nx run green-react:build-nx-storybook"
                   }
                 ]
               },
@@ -4689,7 +4689,7 @@
               "options": {
                 "commands": [
                   {
-                    "command": "nx run react:update-dependencies && nx run react:version"
+                    "command": "nx run green-react:update-dependencies && nx run green-react:version"
                   }
                 ]
               }

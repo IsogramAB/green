@@ -1,5 +1,5 @@
 {
-  "name": "angular-charts",
+  "name": "green-angular-charts",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/green-angular-charts/src",
@@ -75,7 +75,7 @@
       "options": {
         "commands": [
           {
-            "command": "nx run angular-charts:update-dependencies && nx run angular-charts:version"
+            "command": "nx run green-angular-charts:update-dependencies && nx run green-angular-charts:version"
           }
         ]
       }

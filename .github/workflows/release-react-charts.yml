@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
 
       - name: Configure Git
         run: |
@@ -45,10 +45,10 @@ jobs:
         run: yarn install --prefer-offline --frozen-lockfile --silent
 
       - name: Build
-        run: npx nx run react-charts:build
+        run: npx nx run green-react-charts:build
 
       - name: Prepare release of react-charts
-        run: npx nx run react-charts:version --baseBranch='main' --origin='origin'
+        run: npx nx run green-react-charts:version --baseBranch='main' --origin='origin'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

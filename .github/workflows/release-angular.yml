@@ -13,7 +13,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
 
       - name: Configure Git
         run: |
@@ -45,10 +45,10 @@ jobs:
         run: yarn install --prefer-offline --frozen-lockfile --silent
 
       - name: Build angular
-        run: npx nx run angular:build
+        run: npx nx run green-angular:build
 
       - name: Prepare release of angular
-        run: npx nx run angular:version --baseBranch='main' --origin='origin'
+        run: npx nx run green-angular:version --baseBranch='main' --origin='origin'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
