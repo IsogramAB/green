@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.1.5](https://github.com/splashdust/green/compare/@sebgroup/green-charts@1.1.4...@sebgroup/green-charts@1.1.5) (2023-03-24)
+
+### Dependency Updates
+
+* `chlorophyll` updated to version `1.5.5`
+
+
 ## [1.1.4](https://github.com/splashdust/green/compare/@sebgroup/green-charts@1.1.3...@sebgroup/green-charts@1.1.4) (2023-03-24)
 
 ### Dependency Updates
