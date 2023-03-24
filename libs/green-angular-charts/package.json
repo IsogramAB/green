@@ -8,7 +8,7 @@
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {
-    "@sebgroup/green-charts": "^1.1.4",
+    "@sebgroup/green-charts": "^1.1.5",
     "tslib": "^2.3.1",
     "@sebgroup/charts": "^1.1.3"
   },
