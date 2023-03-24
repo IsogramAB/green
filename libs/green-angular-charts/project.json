@@ -89,6 +89,7 @@
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
         "push": false,
+        "tagPrefix": "@sebgroup/${projectName}@",
         "trackDeps": true
       }
     },
