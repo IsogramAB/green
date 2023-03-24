@@ -89,8 +89,7 @@
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
         "tagPrefix": "@sebgroup/green-${projectName}@",
-        "push": true,
-        "postTargets": ["angular-charts:publish", "angular-charts:github"]
+        "push": false
       }
     },
     "github": {
