@@ -15,48 +15,4 @@ export * from './lib/size'
 export * from './lib/slider'
 export * from './lib/stepper'
 
-// Nonsense hange
-
-// derp
-
-// derp
-
-// derp
-
-//derp
-
-// derp
-
-// a new chaneg
-
-// asd
-
-// asd
-
-// asd
-
-// ase
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// asd
-
-// ads
-
-// asd
+// Some change
