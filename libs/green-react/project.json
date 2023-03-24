@@ -97,7 +97,6 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
-        "tagPrefix": "@sebgroup/green-${projectName}@",
         "push": false,
         "trackDeps": true
       }
