@@ -89,7 +89,7 @@
       }
     },
     "update-dependencies": {
-      "executor": "./tools/executors/update-deps:update-deps",
+      "executor": "@sebgroup/update-deps:update-deps",
       "options": {}
     },
     "version": {
