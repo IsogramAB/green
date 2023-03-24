@@ -11,6 +11,15 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 
 
+# [1.5.0](https://github.com/splashdust/green/compare/@sebgroup/chlorophyll@1.4.0...@sebgroup/chlorophyll@1.5.0) (2023-03-24)
+
+
+### Features
+
+* 🎸 Add link variants: animated with arrow, icon on the left or right ([#797](https://github.com/splashdust/green/issues/797)) ([02dfc85](https://github.com/splashdust/green/commit/02dfc853e5a59a829299aab02a9be665a231fa9c)), closes [#787](https://github.com/splashdust/green/issues/787) [#787](https://github.com/splashdust/green/issues/787) [#787](https://github.com/splashdust/green/issues/787)
+
+
+
 # [1.4.0](https://github.com/sebgroup/green/compare/@sebgroup/chlorophyll@1.3.0...@sebgroup/chlorophyll@1.4.0) (2023-03-20)
 
 ### Bug Fixes
