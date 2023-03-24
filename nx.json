@@ -72,6 +72,9 @@
     },
     "version": {
       "dependsOn": ["^version"]
+    },
+    "prepare-release": {
+      "dependsOn": ["^prepare-release"]
     }
   },
   "namedInputs": {

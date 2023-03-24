@@ -74,6 +74,16 @@
         }
       }
     },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run chlorophyll:version"
+          }
+        ]
+      }
+    },
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {

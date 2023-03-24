@@ -40,13 +40,22 @@
         "passWithNoTests": true
       }
     },
+    "prepare-release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run extract:version"
+          }
+        ]
+      }
+    },
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
         "tagPrefix": "@sebgroup/${projectName}@",
-        "push": false,
-        "trackDeps": true
+        "push": false
       }
     },
     "github": {
