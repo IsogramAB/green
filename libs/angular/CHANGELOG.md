@@ -2,6 +2,26 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.2.0](https://github.com/splashdust/green/compare/@sebgroup/green-angular@1.1.0...@sebgroup/green-angular@1.2.0) (2023-03-24)
+
+### Dependency Updates
+
+* `chlorophyll` updated to version `1.0.0`
+* `extract` updated to version `1.0.0`
+
+### Bug Fixes
+
+* 🐛 implement on changes to detech when value has changed ([#803](https://github.com/splashdust/green/issues/803)) ([19fc2d9](https://github.com/splashdust/green/commit/19fc2d907c6b69da59ecd90e2f98773cab800a77))
+* 🐛 lint issues ([aec54a9](https://github.com/splashdust/green/commit/aec54a918b6930b25cefece773ba5ee3d575f6b1))
+* bump package versions ([#800](https://github.com/splashdust/green/issues/800)) ([ec5eb19](https://github.com/splashdust/green/commit/ec5eb19c89f94aa4a322d762138806bedaa176e3))
+
+
+### Features
+
+* 🎸 new slider component for react ([8ba92b9](https://github.com/splashdust/green/commit/8ba92b9e24f51450cc559c54503a0d29a1349f02))
+
+
+
 # [1.2.0](https://github.com/splashdust/green/compare/@sebgroup/green-angular@1.1.0...@sebgroup/green-angular@1.2.0) (2023-03-22)
 
 ### Dependency Updates
