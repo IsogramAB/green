@@ -9,6 +9,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 * `green-charts` updated to version `0.0.1`
 
 
+## 0.0.1 (2023-03-24)
+
+### Dependency Updates
+
+* `green-charts` updated to version `0.0.1`
+
+
 ## [1.0.3](https://github.com/splashdust/green/compare/@sebgroup/green-react-charts@1.0.2...@sebgroup/green-react-charts@1.0.3) (2023-03-24)
 
 ### Dependency Updates
