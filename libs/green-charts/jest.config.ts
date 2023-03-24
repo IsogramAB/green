@@ -14,5 +14,5 @@ export default {
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/(?!billboard.js/.*)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/charts',
+  coverageDirectory: '../../coverage/libs/green-charts',
 }

@@ -1,7 +1,7 @@
 {
   "name": "react",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/react/src",
+  "sourceRoot": "libs/green-react/src",
   "projectType": "library",
   "tags": [],
   "implicitDependencies": ["chlorophyll", "extract"],
@@ -10,17 +10,17 @@
       "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/react",
-        "packageJson": "libs/react/package.json",
-        "tsConfig": "libs/react/tsconfig.lib.json",
-        "project": "libs/react/package.json",
-        "entryFile": "libs/react/src/index.ts",
+        "outputPath": "dist/libs/green-react",
+        "packageJson": "libs/green-react/package.json",
+        "tsConfig": "libs/green-react/tsconfig.lib.json",
+        "project": "libs/green-react/package.json",
+        "entryFile": "libs/green-react/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "updateBuildableProjectDepsInPackageJson": false,
         "assets": [
           {
-            "glob": "libs/react/README.md",
+            "glob": "libs/green-react/README.md",
             "input": ".",
             "output": "."
           }
@@ -30,15 +30,15 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/react/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/green-react/**/*.{ts,tsx,js,jsx}"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/react"],
+      "outputs": ["{workspaceRoot}/coverage/libs/green-react"],
       "options": {
-        "jestConfig": "libs/react/jest.config.ts",
+        "jestConfig": "libs/green-react/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -47,7 +47,7 @@
       "options": {
         "uiFramework": "@storybook/react",
         "port": 4200,
-        "configDir": "libs/react/.storybook"
+        "configDir": "libs/green-react/.storybook"
       },
       "configurations": {
         "ci": {
@@ -60,7 +60,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "configDir": "libs/react/.storybook",
+        "configDir": "libs/green-react/.storybook",
         "outputDir": "dist/storybook/react"
       },
       "configurations": {

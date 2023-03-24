@@ -3,5 +3,5 @@
 /* add the components you need here */
 @use './libs/chlorophyll/scss/components/fonts'; // font declaration
 
-@use './libs/charts/scss/mixins' as chart-mixins;
+@use './libs/green-charts/scss/mixins' as chart-mixins;
 @include chart-mixins.add-chart-styles; // add charts

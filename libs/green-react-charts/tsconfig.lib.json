@@ -4,7 +4,7 @@
     "outDir": "../../dist/out-tsc",
     "types": ["node"],
     "paths": {
-      "@sebgroup/green-charts": ["dist/libs/charts"]
+      "@sebgroup/green-charts": ["dist/libs/green-charts"]
     }
   },
   "files": [

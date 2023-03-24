@@ -1,7 +1,7 @@
 {
   "name": "react-charts",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/react-charts/src",
+  "sourceRoot": "libs/green-react-charts/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,17 +9,17 @@
       "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/react-charts",
-        "packageJson": "libs/react-charts/package.json",
-        "tsConfig": "libs/react-charts/tsconfig.lib.json",
-        "project": "libs/react-charts/package.json",
-        "entryFile": "libs/react-charts/src/index.ts",
+        "outputPath": "dist/libs/green-react-charts",
+        "packageJson": "libs/green-react-charts/package.json",
+        "tsConfig": "libs/green-react-charts/tsconfig.lib.json",
+        "project": "libs/green-react-charts/package.json",
+        "entryFile": "libs/green-react-charts/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "updateBuildableProjectDepsInPackageJson": false,
         "assets": [
           {
-            "glob": "libs/react-charts/README.md",
+            "glob": "libs/green-react-charts/README.md",
             "input": ".",
             "output": "."
           }
@@ -30,14 +30,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/react-charts/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/green-react-charts/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/react-charts"],
+      "outputs": ["{workspaceRoot}/coverage/libs/green-react-charts"],
       "options": {
-        "jestConfig": "libs/react-charts/jest.config.ts",
+        "jestConfig": "libs/green-react-charts/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -46,7 +46,7 @@
       "options": {
         "uiFramework": "@storybook/react",
         "port": 4300,
-        "configDir": "libs/react-charts/.storybook"
+        "configDir": "libs/green-react-charts/.storybook"
       },
       "configurations": {
         "ci": {
@@ -59,7 +59,7 @@
       "outputs": ["{options.outputDir}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "configDir": "libs/react-charts/.storybook",
+        "configDir": "libs/green-react-charts/.storybook",
         "outputDir": "dist/storybook/react-charts"
       },
       "configurations": {

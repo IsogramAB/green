@@ -2,33 +2,33 @@
   "name": "angular",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/angular/src",
+  "sourceRoot": "libs/green-angular/src",
   "prefix": "green",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["{workspaceRoot}/dist/libs/angular"],
+      "outputs": ["{workspaceRoot}/dist/libs/green-angular"],
       "options": {
-        "project": "libs/angular/ng-package.json",
-        "tsConfig": "libs/angular/tsconfig.lib.prod.json",
+        "project": "libs/green-angular/ng-package.json",
+        "tsConfig": "libs/green-angular/tsconfig.lib.prod.json",
         "updateBuildableProjectDepsInPackageJson": false
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/angular/tsconfig.lib.prod.json"
+          "tsConfig": "libs/green-angular/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/angular/tsconfig.lib.json"
+          "tsConfig": "libs/green-angular/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/angular"],
+      "outputs": ["{workspaceRoot}/coverage/libs/green-angular"],
       "options": {
-        "jestConfig": "libs/angular/jest.config.ts",
+        "jestConfig": "libs/green-angular/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -36,8 +36,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/angular/src/**/*.ts",
-          "libs/angular/src/**/*.html"
+          "libs/green-angular/src/**/*.ts",
+          "libs/green-angular/src/**/*.html"
         ]
       },
       "outputs": ["{options.outputFile}"]
@@ -47,7 +47,7 @@
       "options": {
         "port": 4100,
         "host": "0.0.0.0",
-        "configDir": "libs/angular/.storybook",
+        "configDir": "libs/green-angular/.storybook",
         "browserTarget": "angular:build-storybook",
         "compodoc": false
       },
@@ -62,7 +62,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputDir": "dist/storybook/angular",
-        "configDir": "libs/angular/.storybook",
+        "configDir": "libs/green-angular/.storybook",
         "browserTarget": "angular:build-storybook",
         "compodoc": false
       },

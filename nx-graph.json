@@ -12,17 +12,10 @@
           "prefix": "green",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@angular-devkit/build-angular:browser",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
                 "outputPath": "dist/apps/angular-handle-legacy",
                 "index": "apps/angular-handle-legacy/src/index.html",
@@ -34,9 +27,7 @@
                   "apps/angular-handle-legacy/src/favicon.ico",
                   "apps/angular-handle-legacy/src/assets"
                 ],
-                "styles": [
-                  "apps/angular-handle-legacy/src/styles.scss"
-                ],
+                "styles": ["apps/angular-handle-legacy/src/styles.scss"],
                 "scripts": []
               },
               "configurations": {
@@ -94,10 +85,7 @@
               }
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
                 "lintFilePatterns": [
@@ -396,17 +384,10 @@
           "prefix": "green",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@angular-devkit/build-angular:browser",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
                 "outputPath": "dist/apps/angular-lib-dev",
                 "index": "apps/angular-lib-dev/src/index.html",
@@ -418,9 +399,7 @@
                   "apps/angular-lib-dev/src/favicon.ico",
                   "apps/angular-lib-dev/src/assets"
                 ],
-                "styles": [
-                  "apps/angular-lib-dev/src/styles.scss"
-                ],
+                "styles": ["apps/angular-lib-dev/src/styles.scss"],
                 "scripts": []
               },
               "configurations": {
@@ -478,10 +457,7 @@
               }
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
                 "lintFilePatterns": [
@@ -498,9 +474,7 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/apps/angular-lib-dev"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/apps/angular-lib-dev"],
               "options": {
                 "jestConfig": "apps/angular-lib-dev/jest.config.ts",
                 "passWithNoTests": true
@@ -1027,33 +1001,26 @@
           "name": "angular-charts",
           "$schema": "../../node_modules/nx/schemas/project-schema.json",
           "projectType": "library",
-          "sourceRoot": "libs/angular-charts/src",
+          "sourceRoot": "libs/green-angular-charts/src",
           "prefix": "green",
           "tags": [],
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/angular:package",
-              "outputs": [
-                "{workspaceRoot}/dist/libs/angular-charts"
-              ],
+              "outputs": ["{workspaceRoot}/dist/libs/green-angular-charts"],
               "options": {
-                "project": "libs/angular-charts/ng-package.json",
-                "tsConfig": "libs/angular-charts/tsconfig.lib.prod.json",
+                "project": "libs/green-angular-charts/ng-package.json",
+                "tsConfig": "libs/green-angular-charts/tsconfig.lib.prod.json",
                 "updateBuildableProjectDepsInPackageJson": false
               },
               "configurations": {
                 "production": {
-                  "tsConfig": "libs/angular-charts/tsconfig.lib.prod.json"
+                  "tsConfig": "libs/green-angular-charts/tsconfig.lib.prod.json"
                 },
                 "development": {
-                  "tsConfig": "libs/angular-charts/tsconfig.lib.json"
+                  "tsConfig": "libs/green-angular-charts/tsconfig.lib.json"
                 }
               },
               "defaultConfiguration": "production"
@@ -1065,25 +1032,20 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/angular-charts"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/green-angular-charts"],
               "options": {
-                "jestConfig": "libs/angular-charts/jest.config.ts",
+                "jestConfig": "libs/green-angular-charts/jest.config.ts",
                 "passWithNoTests": true
               },
               "configurations": {}
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
                 "lintFilePatterns": [
-                  "libs/angular-charts/src/**/*.ts",
-                  "libs/angular-charts/src/**/*.html"
+                  "libs/green-angular-charts/src/**/*.ts",
+                  "libs/green-angular-charts/src/**/*.html"
                 ]
               },
               "configurations": {}
@@ -1092,7 +1054,7 @@
               "executor": "@storybook/angular:start-storybook",
               "options": {
                 "port": 4400,
-                "configDir": "libs/angular-charts/.storybook",
+                "configDir": "libs/green-angular-charts/.storybook",
                 "browserTarget": "angular-charts:build-storybook",
                 "compodoc": false
               },
@@ -1109,12 +1071,10 @@
                 "{workspaceRoot}/.storybook/**/*"
               ],
               "executor": "@storybook/angular:build-storybook",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
                 "outputDir": "dist/storybook/angular-charts",
-                "configDir": "libs/angular-charts/.storybook",
+                "configDir": "libs/green-angular-charts/.storybook",
                 "browserTarget": "angular-charts:build-storybook",
                 "compodoc": false
               },
@@ -1165,47 +1125,47 @@
               }
             }
           },
-          "root": "libs/angular-charts",
+          "root": "libs/green-angular-charts",
           "implicitDependencies": [],
           "files": [
             {
-              "file": "libs/angular-charts/.eslintrc.json",
+              "file": "libs/green-angular-charts/.eslintrc.json",
               "hash": "4728562362015237904"
             },
             {
-              "file": "libs/angular-charts/.storybook/main.js",
+              "file": "libs/green-angular-charts/.storybook/main.js",
               "hash": "12901269317492899814"
             },
             {
-              "file": "libs/angular-charts/.storybook/manager.js",
+              "file": "libs/green-angular-charts/.storybook/manager.js",
               "hash": "6033347247868701520"
             },
             {
-              "file": "libs/angular-charts/.storybook/preview.js",
+              "file": "libs/green-angular-charts/.storybook/preview.js",
               "hash": "10267744669899134690"
             },
             {
-              "file": "libs/angular-charts/.storybook/preview.scss",
+              "file": "libs/green-angular-charts/.storybook/preview.scss",
               "hash": "9751983301630807507"
             },
             {
-              "file": "libs/angular-charts/.storybook/tsconfig.json",
+              "file": "libs/green-angular-charts/.storybook/tsconfig.json",
               "hash": "2319930908925267829"
             },
             {
-              "file": "libs/angular-charts/CHANGELOG.md",
+              "file": "libs/green-angular-charts/CHANGELOG.md",
               "hash": "12534563155419690097"
             },
             {
-              "file": "libs/angular-charts/jest.config.ts",
+              "file": "libs/green-angular-charts/jest.config.ts",
               "hash": "6309987691775502943"
             },
             {
-              "file": "libs/angular-charts/ng-package.json",
+              "file": "libs/green-angular-charts/ng-package.json",
               "hash": "13319682932833728873"
             },
             {
-              "file": "libs/angular-charts/package.json",
+              "file": "libs/green-angular-charts/package.json",
               "hash": "12230849805438063682",
               "dependencies": [
                 {
@@ -1246,19 +1206,19 @@
               ]
             },
             {
-              "file": "libs/angular-charts/project.json",
+              "file": "libs/green-angular-charts/project.json",
               "hash": "9311312911109223121"
             },
             {
-              "file": "libs/angular-charts/README.md",
+              "file": "libs/green-angular-charts/README.md",
               "hash": "6977180078019426661"
             },
             {
-              "file": "libs/angular-charts/src/index.ts",
+              "file": "libs/green-angular-charts/src/index.ts",
               "hash": "14343254103639863262"
             },
             {
-              "file": "libs/angular-charts/src/lib/chart/chart.stories.ts",
+              "file": "libs/green-angular-charts/src/lib/chart/chart.stories.ts",
               "hash": "15982897084002089154",
               "dependencies": [
                 {
@@ -1284,11 +1244,11 @@
               ]
             },
             {
-              "file": "libs/angular-charts/src/lib/chart/Get-started.stories.mdx",
+              "file": "libs/green-angular-charts/src/lib/chart/Get-started.stories.mdx",
               "hash": "10611658423761269566"
             },
             {
-              "file": "libs/angular-charts/src/lib/chart/ngg-chart.component.ts",
+              "file": "libs/green-angular-charts/src/lib/chart/ngg-chart.component.ts",
               "hash": "8781973962896461083",
               "dependencies": [
                 {
@@ -1304,7 +1264,7 @@
               ]
             },
             {
-              "file": "libs/angular-charts/src/lib/ngg-charts.module.ts",
+              "file": "libs/green-angular-charts/src/lib/ngg-charts.module.ts",
               "hash": "8637323570055946587",
               "dependencies": [
                 {
@@ -1320,7 +1280,7 @@
               ]
             },
             {
-              "file": "libs/angular-charts/src/test-setup.ts",
+              "file": "libs/green-angular-charts/src/test-setup.ts",
               "hash": "10230766297440920453",
               "dependencies": [
                 {
@@ -1331,19 +1291,19 @@
               ]
             },
             {
-              "file": "libs/angular-charts/tsconfig.json",
+              "file": "libs/green-angular-charts/tsconfig.json",
               "hash": "12951099538230907405"
             },
             {
-              "file": "libs/angular-charts/tsconfig.lib.json",
+              "file": "libs/green-angular-charts/tsconfig.lib.json",
               "hash": "2739726872508386550"
             },
             {
-              "file": "libs/angular-charts/tsconfig.lib.prod.json",
+              "file": "libs/green-angular-charts/tsconfig.lib.prod.json",
               "hash": "7595784142384980674"
             },
             {
-              "file": "libs/angular-charts/tsconfig.spec.json",
+              "file": "libs/green-angular-charts/tsconfig.spec.json",
               "hash": "9419262254794573494"
             }
           ]
@@ -1359,17 +1319,10 @@
           "projectType": "application",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/webpack:webpack",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "defaultConfiguration": "production",
               "options": {
                 "compiler": "babel",
@@ -1383,9 +1336,7 @@
                   "apps/react-lib-dev/src/favicon.ico",
                   "apps/react-lib-dev/src/assets"
                 ],
-                "styles": [
-                  "apps/react-lib-dev/src/styles.scss"
-                ],
+                "styles": ["apps/react-lib-dev/src/styles.scss"],
                 "scripts": [],
                 "webpackConfig": "apps/react-lib-dev/webpack.config.js",
                 "isolatedConfig": true
@@ -1421,18 +1372,11 @@
               }
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "options": {
-                "lintFilePatterns": [
-                  "apps/react-lib-dev/**/*.{ts,tsx,js,jsx}"
-                ]
+                "lintFilePatterns": ["apps/react-lib-dev/**/*.{ts,tsx,js,jsx}"]
               },
               "configurations": {}
             },
@@ -1443,9 +1387,7 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/apps/react-lib-dev"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/apps/react-lib-dev"],
               "options": {
                 "jestConfig": "apps/react-lib-dev/jest.config.ts",
                 "passWithNoTests": true
@@ -1641,36 +1583,27 @@
         "data": {
           "name": "react-charts",
           "$schema": "../../node_modules/nx/schemas/project-schema.json",
-          "sourceRoot": "libs/react-charts/src",
+          "sourceRoot": "libs/green-react-charts/src",
           "projectType": "library",
           "tags": [],
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/rollup:rollup",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
-                "outputPath": "dist/libs/react-charts",
-                "packageJson": "libs/react-charts/package.json",
-                "tsConfig": "libs/react-charts/tsconfig.lib.json",
-                "project": "libs/react-charts/package.json",
-                "entryFile": "libs/react-charts/src/index.ts",
-                "external": [
-                  "react/jsx-runtime"
-                ],
+                "outputPath": "dist/libs/green-react-charts",
+                "packageJson": "libs/green-react-charts/package.json",
+                "tsConfig": "libs/green-react-charts/tsconfig.lib.json",
+                "project": "libs/green-react-charts/package.json",
+                "entryFile": "libs/green-react-charts/src/index.ts",
+                "external": ["react/jsx-runtime"],
                 "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
                 "updateBuildableProjectDepsInPackageJson": false,
                 "assets": [
                   {
-                    "glob": "libs/react-charts/README.md",
+                    "glob": "libs/green-react-charts/README.md",
                     "input": ".",
                     "output": "."
                   }
@@ -1679,17 +1612,12 @@
               "configurations": {}
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "options": {
                 "lintFilePatterns": [
-                  "libs/react-charts/**/*.{ts,tsx,js,jsx}"
+                  "libs/green-react-charts/**/*.{ts,tsx,js,jsx}"
                 ]
               },
               "configurations": {}
@@ -1701,11 +1629,9 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/react-charts"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/green-react-charts"],
               "options": {
-                "jestConfig": "libs/react-charts/jest.config.ts",
+                "jestConfig": "libs/green-react-charts/jest.config.ts",
                 "passWithNoTests": true
               },
               "configurations": {}
@@ -1715,7 +1641,7 @@
               "options": {
                 "uiFramework": "@storybook/react",
                 "port": 4300,
-                "configDir": "libs/react-charts/.storybook"
+                "configDir": "libs/green-react-charts/.storybook"
               },
               "configurations": {
                 "ci": {
@@ -1730,12 +1656,10 @@
                 "{workspaceRoot}/.storybook/**/*"
               ],
               "executor": "@nrwl/storybook:build",
-              "outputs": [
-                "{options.outputDir}"
-              ],
+              "outputs": ["{options.outputDir}"],
               "options": {
                 "uiFramework": "@storybook/react",
-                "configDir": "libs/react-charts/.storybook",
+                "configDir": "libs/green-react-charts/.storybook",
                 "outputDir": "dist/storybook/react-charts"
               },
               "configurations": {
@@ -1780,10 +1704,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/green-${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "react-charts:publish",
-                  "react-charts:github"
-                ]
+                "postTargets": ["react-charts:publish", "react-charts:github"]
               }
             },
             "github": {
@@ -1800,27 +1721,27 @@
               }
             }
           },
-          "root": "libs/react-charts",
+          "root": "libs/green-react-charts",
           "implicitDependencies": [],
           "files": [
             {
-              "file": "libs/react-charts/.babelrc",
+              "file": "libs/green-react-charts/.babelrc",
               "hash": "11855890993922274285"
             },
             {
-              "file": "libs/react-charts/.eslintrc.json",
+              "file": "libs/green-react-charts/.eslintrc.json",
               "hash": "10075191527724852300"
             },
             {
-              "file": "libs/react-charts/.storybook/main.js",
+              "file": "libs/green-react-charts/.storybook/main.js",
               "hash": "4967625018340240149"
             },
             {
-              "file": "libs/react-charts/.storybook/manager.js",
+              "file": "libs/green-react-charts/.storybook/manager.js",
               "hash": "6033347247868701520"
             },
             {
-              "file": "libs/react-charts/.storybook/postcss.config.js",
+              "file": "libs/green-react-charts/.storybook/postcss.config.js",
               "hash": "16617588538721898407",
               "dependencies": [
                 {
@@ -1831,27 +1752,27 @@
               ]
             },
             {
-              "file": "libs/react-charts/.storybook/preview.js",
+              "file": "libs/green-react-charts/.storybook/preview.js",
               "hash": "6686422436995836096"
             },
             {
-              "file": "libs/react-charts/.storybook/preview.scss",
+              "file": "libs/green-react-charts/.storybook/preview.scss",
               "hash": "10318384361639117913"
             },
             {
-              "file": "libs/react-charts/.storybook/tsconfig.json",
+              "file": "libs/green-react-charts/.storybook/tsconfig.json",
               "hash": "523677841576694651"
             },
             {
-              "file": "libs/react-charts/CHANGELOG.md",
+              "file": "libs/green-react-charts/CHANGELOG.md",
               "hash": "13288738958107062906"
             },
             {
-              "file": "libs/react-charts/jest.config.ts",
+              "file": "libs/green-react-charts/jest.config.ts",
               "hash": "4829099006915843217"
             },
             {
-              "file": "libs/react-charts/package.json",
+              "file": "libs/green-react-charts/package.json",
               "hash": "15846224981375970242",
               "dependencies": [
                 {
@@ -1877,19 +1798,19 @@
               ]
             },
             {
-              "file": "libs/react-charts/project.json",
+              "file": "libs/green-react-charts/project.json",
               "hash": "7343361565834925386"
             },
             {
-              "file": "libs/react-charts/README.md",
+              "file": "libs/green-react-charts/README.md",
               "hash": "16966316628410758397"
             },
             {
-              "file": "libs/react-charts/src/index.ts",
+              "file": "libs/green-react-charts/src/index.ts",
               "hash": "1759715197549236059"
             },
             {
-              "file": "libs/react-charts/src/lib/chart.spec.tsx",
+              "file": "libs/green-react-charts/src/lib/chart.spec.tsx",
               "hash": "4896775028842147083",
               "dependencies": [
                 {
@@ -1905,7 +1826,7 @@
               ]
             },
             {
-              "file": "libs/react-charts/src/lib/chart.stories.tsx",
+              "file": "libs/green-react-charts/src/lib/chart.stories.tsx",
               "hash": "15221921092891296410",
               "dependencies": [
                 {
@@ -1916,7 +1837,7 @@
               ]
             },
             {
-              "file": "libs/react-charts/src/lib/chart.tsx",
+              "file": "libs/green-react-charts/src/lib/chart.tsx",
               "hash": "12759641593463320138",
               "dependencies": [
                 {
@@ -1932,7 +1853,7 @@
               ]
             },
             {
-              "file": "libs/react-charts/src/lib/hooks.ts",
+              "file": "libs/green-react-charts/src/lib/hooks.ts",
               "hash": "18079903852126844198",
               "dependencies": [
                 {
@@ -1948,19 +1869,19 @@
               ]
             },
             {
-              "file": "libs/react-charts/src/usecases/lighthouse-1.stories.mdx",
+              "file": "libs/green-react-charts/src/usecases/lighthouse-1.stories.mdx",
               "hash": "11964796141694501625"
             },
             {
-              "file": "libs/react-charts/tsconfig.json",
+              "file": "libs/green-react-charts/tsconfig.json",
               "hash": "12511190674594120915"
             },
             {
-              "file": "libs/react-charts/tsconfig.lib.json",
+              "file": "libs/green-react-charts/tsconfig.lib.json",
               "hash": "14319056517372095699"
             },
             {
-              "file": "libs/react-charts/tsconfig.spec.json",
+              "file": "libs/green-react-charts/tsconfig.spec.json",
               "hash": "10655786725045517366"
             }
           ]
@@ -1976,13 +1897,8 @@
           "projectType": "library",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "./tools/executors/scss:build-lib",
               "options": {
                 "packageJson": "libs/chlorophyll/package.json",
@@ -2012,10 +1928,7 @@
               }
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "nx:run-commands",
               "options": {
                 "command": "npx stylelint libs/chlorophyll/**/*.scss"
@@ -2029,9 +1942,7 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/chlorophyll"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/chlorophyll"],
               "options": {
                 "jestConfig": "libs/chlorophyll/jest.config.ts",
                 "passWithNoTests": true
@@ -2059,9 +1970,7 @@
                 "{workspaceRoot}/.storybook/**/*"
               ],
               "executor": "@nrwl/storybook:build",
-              "outputs": [
-                "{options.outputDir}"
-              ],
+              "outputs": ["{options.outputDir}"],
               "options": {
                 "uiFramework": "@storybook/html",
                 "configDir": "libs/chlorophyll/.storybook",
@@ -2079,10 +1988,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "chlorophyll:publish",
-                  "chlorophyll:github"
-                ]
+                "postTargets": ["chlorophyll:publish", "chlorophyll:github"]
               }
             },
             "github": {
@@ -2908,33 +2814,26 @@
           "name": "angular",
           "$schema": "../../node_modules/nx/schemas/project-schema.json",
           "projectType": "library",
-          "sourceRoot": "libs/angular/src",
+          "sourceRoot": "libs/green-angular/src",
           "prefix": "green",
           "tags": [],
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/angular:package",
-              "outputs": [
-                "{workspaceRoot}/dist/libs/angular"
-              ],
+              "outputs": ["{workspaceRoot}/dist/libs/green-angular"],
               "options": {
-                "project": "libs/angular/ng-package.json",
-                "tsConfig": "libs/angular/tsconfig.lib.prod.json",
+                "project": "libs/green-angular/ng-package.json",
+                "tsConfig": "libs/green-angular/tsconfig.lib.prod.json",
                 "updateBuildableProjectDepsInPackageJson": false
               },
               "configurations": {
                 "production": {
-                  "tsConfig": "libs/angular/tsconfig.lib.prod.json"
+                  "tsConfig": "libs/green-angular/tsconfig.lib.prod.json"
                 },
                 "development": {
-                  "tsConfig": "libs/angular/tsconfig.lib.json"
+                  "tsConfig": "libs/green-angular/tsconfig.lib.json"
                 }
               },
               "defaultConfiguration": "production"
@@ -2946,30 +2845,23 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/angular"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/green-angular"],
               "options": {
-                "jestConfig": "libs/angular/jest.config.ts",
+                "jestConfig": "libs/green-angular/jest.config.ts",
                 "passWithNoTests": true
               },
               "configurations": {}
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
                 "lintFilePatterns": [
-                  "libs/angular/src/**/*.ts",
-                  "libs/angular/src/**/*.html"
+                  "libs/green-angular/src/**/*.ts",
+                  "libs/green-angular/src/**/*.html"
                 ]
               },
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "configurations": {}
             },
             "storybook": {
@@ -2977,7 +2869,7 @@
               "options": {
                 "port": 4100,
                 "host": "0.0.0.0",
-                "configDir": "libs/angular/.storybook",
+                "configDir": "libs/green-angular/.storybook",
                 "browserTarget": "angular:build-storybook",
                 "compodoc": false
               },
@@ -2994,12 +2886,10 @@
                 "{workspaceRoot}/.storybook/**/*"
               ],
               "executor": "@storybook/angular:build-storybook",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
                 "outputDir": "dist/storybook/angular",
-                "configDir": "libs/angular/.storybook",
+                "configDir": "libs/green-angular/.storybook",
                 "browserTarget": "angular:build-storybook",
                 "compodoc": false
               },
@@ -3029,10 +2919,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/green-${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "angular:publish",
-                  "angular:github"
-                ]
+                "postTargets": ["angular:publish", "angular:github"]
               }
             },
             "github": {
@@ -3050,23 +2937,23 @@
               }
             }
           },
-          "root": "libs/angular",
+          "root": "libs/green-angular",
           "implicitDependencies": [],
           "files": [
             {
-              "file": "libs/angular/.eslintrc.json",
+              "file": "libs/green-angular/.eslintrc.json",
               "hash": "4728562362015237904"
             },
             {
-              "file": "libs/angular/.storybook/main.js",
+              "file": "libs/green-angular/.storybook/main.js",
               "hash": "13385553982361214380"
             },
             {
-              "file": "libs/angular/.storybook/manager.js",
+              "file": "libs/green-angular/.storybook/manager.js",
               "hash": "6033347247868701520"
             },
             {
-              "file": "libs/angular/.storybook/postcss.config.js",
+              "file": "libs/green-angular/.storybook/postcss.config.js",
               "hash": "16248560507441963794",
               "dependencies": [
                 {
@@ -3077,31 +2964,31 @@
               ]
             },
             {
-              "file": "libs/angular/.storybook/preview.js",
+              "file": "libs/green-angular/.storybook/preview.js",
               "hash": "313441338994411807"
             },
             {
-              "file": "libs/angular/.storybook/preview.scss",
+              "file": "libs/green-angular/.storybook/preview.scss",
               "hash": "11073189870814380203"
             },
             {
-              "file": "libs/angular/.storybook/tsconfig.json",
+              "file": "libs/green-angular/.storybook/tsconfig.json",
               "hash": "7132174011347803170"
             },
             {
-              "file": "libs/angular/CHANGELOG.md",
+              "file": "libs/green-angular/CHANGELOG.md",
               "hash": "8441937360081649140"
             },
             {
-              "file": "libs/angular/jest.config.ts",
+              "file": "libs/green-angular/jest.config.ts",
               "hash": "3890493589560914958"
             },
             {
-              "file": "libs/angular/ng-package.json",
+              "file": "libs/green-angular/ng-package.json",
               "hash": "9929431927005692797"
             },
             {
-              "file": "libs/angular/package.json",
+              "file": "libs/green-angular/package.json",
               "hash": "2402157455315555937",
               "dependencies": [
                 {
@@ -3157,23 +3044,23 @@
               ]
             },
             {
-              "file": "libs/angular/project.json",
+              "file": "libs/green-angular/project.json",
               "hash": "1841993757495354776"
             },
             {
-              "file": "libs/angular/README.md",
+              "file": "libs/green-angular/README.md",
               "hash": "13507600342770861527"
             },
             {
-              "file": "libs/angular/src/index.ts",
+              "file": "libs/green-angular/src/index.ts",
               "hash": "723904140426384029"
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion-list-item.component.html",
+              "file": "libs/green-angular/src/lib/accordion/accordion-list-item.component.html",
               "hash": "5720238764041609559"
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion-list-item.component.spec.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion-list-item.component.spec.ts",
               "hash": "6997679095295527018",
               "dependencies": [
                 {
@@ -3184,7 +3071,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion-list-item.component.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion-list-item.component.ts",
               "hash": "6262667885434158745",
               "dependencies": [
                 {
@@ -3200,11 +3087,11 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion.component.html",
+              "file": "libs/green-angular/src/lib/accordion/accordion.component.html",
               "hash": "16644588130575474702"
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion.component.spec.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion.component.spec.ts",
               "hash": "2289416175656350263",
               "dependencies": [
                 {
@@ -3230,7 +3117,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion.component.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion.component.ts",
               "hash": "10554224558022265577",
               "dependencies": [
                 {
@@ -3246,7 +3133,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion.module.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion.module.ts",
               "hash": "17892667148972391178",
               "dependencies": [
                 {
@@ -3262,7 +3149,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/accordion.stories.ts",
+              "file": "libs/green-angular/src/lib/accordion/accordion.stories.ts",
               "hash": "3055933217449800203",
               "dependencies": [
                 {
@@ -3273,15 +3160,15 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/accordion/documentation.mdx",
+              "file": "libs/green-angular/src/lib/accordion/documentation.mdx",
               "hash": "6975497041821305646"
             },
             {
-              "file": "libs/angular/src/lib/accordion/index.ts",
+              "file": "libs/green-angular/src/lib/accordion/index.ts",
               "hash": "5305753859489849936"
             },
             {
-              "file": "libs/angular/src/lib/badge/badge.component.ts",
+              "file": "libs/green-angular/src/lib/badge/badge.component.ts",
               "hash": "4460298140055906846",
               "dependencies": [
                 {
@@ -3297,7 +3184,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/badge/badge.module.ts",
+              "file": "libs/green-angular/src/lib/badge/badge.module.ts",
               "hash": "1141521345573010185",
               "dependencies": [
                 {
@@ -3313,7 +3200,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/badge/badge.stories.ts",
+              "file": "libs/green-angular/src/lib/badge/badge.stories.ts",
               "hash": "14271044285825339482",
               "dependencies": [
                 {
@@ -3324,15 +3211,15 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/badge/documentation.mdx",
+              "file": "libs/green-angular/src/lib/badge/documentation.mdx",
               "hash": "8131371474980903364"
             },
             {
-              "file": "libs/angular/src/lib/badge/index.ts",
+              "file": "libs/green-angular/src/lib/badge/index.ts",
               "hash": "8509381173124954803"
             },
             {
-              "file": "libs/angular/src/lib/button/button.component.ts",
+              "file": "libs/green-angular/src/lib/button/button.component.ts",
               "hash": "12221679527183006552",
               "dependencies": [
                 {
@@ -3348,7 +3235,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/button/button.module.ts",
+              "file": "libs/green-angular/src/lib/button/button.module.ts",
               "hash": "1557913541528404373",
               "dependencies": [
                 {
@@ -3364,7 +3251,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/button/button.stories.ts",
+              "file": "libs/green-angular/src/lib/button/button.stories.ts",
               "hash": "1890325562398658051",
               "dependencies": [
                 {
@@ -3375,19 +3262,19 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/button/documentation.mdx",
+              "file": "libs/green-angular/src/lib/button/documentation.mdx",
               "hash": "5073764103753494582"
             },
             {
-              "file": "libs/angular/src/lib/button/index.ts",
+              "file": "libs/green-angular/src/lib/button/index.ts",
               "hash": "11419045031119246354"
             },
             {
-              "file": "libs/angular/src/lib/datepicker/datepicker.component.html",
+              "file": "libs/green-angular/src/lib/datepicker/datepicker.component.html",
               "hash": "1589331003312569696"
             },
             {
-              "file": "libs/angular/src/lib/datepicker/datepicker.component.ts",
+              "file": "libs/green-angular/src/lib/datepicker/datepicker.component.ts",
               "hash": "17331125655910670911",
               "dependencies": [
                 {
@@ -3413,7 +3300,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/datepicker/datepicker.module.ts",
+              "file": "libs/green-angular/src/lib/datepicker/datepicker.module.ts",
               "hash": "9423006411554544919",
               "dependencies": [
                 {
@@ -3429,7 +3316,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/datepicker/datepicker.stories.ts",
+              "file": "libs/green-angular/src/lib/datepicker/datepicker.stories.ts",
               "hash": "4933808211297362241",
               "dependencies": [
                 {
@@ -3450,19 +3337,19 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/datepicker/documentation.mdx",
+              "file": "libs/green-angular/src/lib/datepicker/documentation.mdx",
               "hash": "13479260628573452209"
             },
             {
-              "file": "libs/angular/src/lib/datepicker/index.ts",
+              "file": "libs/green-angular/src/lib/datepicker/index.ts",
               "hash": "13134643358080055709"
             },
             {
-              "file": "libs/angular/src/lib/dropdown/documentation.mdx",
+              "file": "libs/green-angular/src/lib/dropdown/documentation.mdx",
               "hash": "9443824260045629295"
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown-option.directive.ts",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown-option.directive.ts",
               "hash": "12442526328124409671",
               "dependencies": [
                 {
@@ -3473,11 +3360,11 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown.component.html",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown.component.html",
               "hash": "6073519681175346679"
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown.component.ts",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown.component.ts",
               "hash": "6443435520127721372",
               "dependencies": [
                 {
@@ -3498,7 +3385,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown.module.ts",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown.module.ts",
               "hash": "14191997483632725193",
               "dependencies": [
                 {
@@ -3514,7 +3401,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown.spec.ts",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown.spec.ts",
               "hash": "2139564693647423062",
               "dependencies": [
                 {
@@ -3530,7 +3417,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/dropdown/dropdown.stories.ts",
+              "file": "libs/green-angular/src/lib/dropdown/dropdown.stories.ts",
               "hash": "12766578818662967678",
               "dependencies": [
                 {
@@ -3551,15 +3438,15 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/dropdown/index.ts",
+              "file": "libs/green-angular/src/lib/dropdown/index.ts",
               "hash": "9584113136069167974"
             },
             {
-              "file": "libs/angular/src/lib/Get-started.stories.mdx",
+              "file": "libs/green-angular/src/lib/Get-started.stories.mdx",
               "hash": "8520591255656151364"
             },
             {
-              "file": "libs/angular/src/lib/green-angular.module.ts",
+              "file": "libs/green-angular/src/lib/green-angular.module.ts",
               "hash": "7232758124903921136",
               "dependencies": [
                 {
@@ -3575,23 +3462,23 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/modal/documentation.mdx",
+              "file": "libs/green-angular/src/lib/modal/documentation.mdx",
               "hash": "13452686935475818203"
             },
             {
-              "file": "libs/angular/src/lib/modal/index.ts",
+              "file": "libs/green-angular/src/lib/modal/index.ts",
               "hash": "6742850761534467381"
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.component.html",
+              "file": "libs/green-angular/src/lib/modal/modal.component.html",
               "hash": "15035176472322962852"
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.component.scss",
+              "file": "libs/green-angular/src/lib/modal/modal.component.scss",
               "hash": "5898444418119891652"
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.component.spec.ts",
+              "file": "libs/green-angular/src/lib/modal/modal.component.spec.ts",
               "hash": "7016362406287769536",
               "dependencies": [
                 {
@@ -3607,7 +3494,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.component.ts",
+              "file": "libs/green-angular/src/lib/modal/modal.component.ts",
               "hash": "16358331165699174289",
               "dependencies": [
                 {
@@ -3633,7 +3520,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.module.ts",
+              "file": "libs/green-angular/src/lib/modal/modal.module.ts",
               "hash": "16284584815250265342",
               "dependencies": [
                 {
@@ -3654,7 +3541,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/modal/modal.stories.ts",
+              "file": "libs/green-angular/src/lib/modal/modal.stories.ts",
               "hash": "4512935240672116210",
               "dependencies": [
                 {
@@ -3665,19 +3552,19 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/pagination/documentation.mdx",
+              "file": "libs/green-angular/src/lib/pagination/documentation.mdx",
               "hash": "15989260729819058545"
             },
             {
-              "file": "libs/angular/src/lib/pagination/index.ts",
+              "file": "libs/green-angular/src/lib/pagination/index.ts",
               "hash": "15625689603566767748"
             },
             {
-              "file": "libs/angular/src/lib/pagination/pagination.component.html",
+              "file": "libs/green-angular/src/lib/pagination/pagination.component.html",
               "hash": "7504959343455391143"
             },
             {
-              "file": "libs/angular/src/lib/pagination/pagination.component.ts",
+              "file": "libs/green-angular/src/lib/pagination/pagination.component.ts",
               "hash": "13727671338073395124",
               "dependencies": [
                 {
@@ -3693,7 +3580,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/pagination/pagination.module.ts",
+              "file": "libs/green-angular/src/lib/pagination/pagination.module.ts",
               "hash": "18092428794148109104",
               "dependencies": [
                 {
@@ -3709,7 +3596,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/pagination/pagination.spec.ts",
+              "file": "libs/green-angular/src/lib/pagination/pagination.spec.ts",
               "hash": "2202390125234838518",
               "dependencies": [
                 {
@@ -3720,7 +3607,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/pagination/pagination.stories.ts",
+              "file": "libs/green-angular/src/lib/pagination/pagination.stories.ts",
               "hash": "1196891350376124208",
               "dependencies": [
                 {
@@ -3731,19 +3618,19 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/documentation.mdx",
+              "file": "libs/green-angular/src/lib/progress-circle/documentation.mdx",
               "hash": "16916368605307648321"
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/index.ts",
+              "file": "libs/green-angular/src/lib/progress-circle/index.ts",
               "hash": "4107120172871204903"
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/progress-circle.component.html",
+              "file": "libs/green-angular/src/lib/progress-circle/progress-circle.component.html",
               "hash": "15933268565306581926"
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/progress-circle.component.ts",
+              "file": "libs/green-angular/src/lib/progress-circle/progress-circle.component.ts",
               "hash": "1684421055253867324",
               "dependencies": [
                 {
@@ -3759,7 +3646,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/progress-circle.module.ts",
+              "file": "libs/green-angular/src/lib/progress-circle/progress-circle.module.ts",
               "hash": "2003494580766667113",
               "dependencies": [
                 {
@@ -3775,7 +3662,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/progress-circle/progress-circle.stories.ts",
+              "file": "libs/green-angular/src/lib/progress-circle/progress-circle.stories.ts",
               "hash": "15698293422520867800",
               "dependencies": [
                 {
@@ -3786,11 +3673,11 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/segmented-control/index.ts",
+              "file": "libs/green-angular/src/lib/segmented-control/index.ts",
               "hash": "13645958226816136410"
             },
             {
-              "file": "libs/angular/src/lib/segmented-control/segmented-control.component.ts",
+              "file": "libs/green-angular/src/lib/segmented-control/segmented-control.component.ts",
               "hash": "14192744794384209588",
               "dependencies": [
                 {
@@ -3806,7 +3693,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/segmented-control/segmented-control.module.ts",
+              "file": "libs/green-angular/src/lib/segmented-control/segmented-control.module.ts",
               "hash": "8179116896953685379",
               "dependencies": [
                 {
@@ -3827,7 +3714,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/segmented-control/segmented-control.stories.ts",
+              "file": "libs/green-angular/src/lib/segmented-control/segmented-control.stories.ts",
               "hash": "4876226902968925982",
               "dependencies": [
                 {
@@ -3858,19 +3745,19 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/slider/documentation.mdx",
+              "file": "libs/green-angular/src/lib/slider/documentation.mdx",
               "hash": "10049334676905302260"
             },
             {
-              "file": "libs/angular/src/lib/slider/index.ts",
+              "file": "libs/green-angular/src/lib/slider/index.ts",
               "hash": "12912769269830352029"
             },
             {
-              "file": "libs/angular/src/lib/slider/slider.component.html",
+              "file": "libs/green-angular/src/lib/slider/slider.component.html",
               "hash": "7278452748757270154"
             },
             {
-              "file": "libs/angular/src/lib/slider/slider.component.ts",
+              "file": "libs/green-angular/src/lib/slider/slider.component.ts",
               "hash": "753501877972911257",
               "dependencies": [
                 {
@@ -3891,7 +3778,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/slider/slider.module.ts",
+              "file": "libs/green-angular/src/lib/slider/slider.module.ts",
               "hash": "16940942313558231716",
               "dependencies": [
                 {
@@ -3912,7 +3799,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/lib/slider/slider.stories.ts",
+              "file": "libs/green-angular/src/lib/slider/slider.stories.ts",
               "hash": "3261631926239097462",
               "dependencies": [
                 {
@@ -3923,7 +3810,7 @@
               ]
             },
             {
-              "file": "libs/angular/src/test-setup.ts",
+              "file": "libs/green-angular/src/test-setup.ts",
               "hash": "10230766297440920453",
               "dependencies": [
                 {
@@ -3934,11 +3821,11 @@
               ]
             },
             {
-              "file": "libs/angular/stories/input/documentation.mdx",
+              "file": "libs/green-angular/stories/input/documentation.mdx",
               "hash": "10021916118355036379"
             },
             {
-              "file": "libs/angular/stories/input/input.stories.ts",
+              "file": "libs/green-angular/stories/input/input.stories.ts",
               "hash": "10703956995651729676",
               "dependencies": [
                 {
@@ -3954,19 +3841,19 @@
               ]
             },
             {
-              "file": "libs/angular/tsconfig.json",
+              "file": "libs/green-angular/tsconfig.json",
               "hash": "5614283367472837224"
             },
             {
-              "file": "libs/angular/tsconfig.lib.json",
+              "file": "libs/green-angular/tsconfig.lib.json",
               "hash": "2739726872508386550"
             },
             {
-              "file": "libs/angular/tsconfig.lib.prod.json",
+              "file": "libs/green-angular/tsconfig.lib.prod.json",
               "hash": "13458759196402815015"
             },
             {
-              "file": "libs/angular/tsconfig.spec.json",
+              "file": "libs/green-angular/tsconfig.spec.json",
               "hash": "9419262254794573494"
             }
           ]
@@ -3982,26 +3869,17 @@
           "projectType": "library",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/rollup:rollup",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
                 "packageJson": "libs/extract/package.json",
                 "outputPath": "dist/libs/extract",
                 "tsConfig": "libs/extract/tsconfig.lib.json",
                 "project": "libs/extract/package.json",
                 "entryFile": "libs/extract/src/index.ts",
-                "external": [
-                  "react/jsx-runtime"
-                ],
+                "external": ["react/jsx-runtime"],
                 "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
                 "updateBuildableProjectDepsInPackageJson": false,
                 "assets": [
@@ -4015,19 +3893,12 @@
               "configurations": {}
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
-                "lintFilePatterns": [
-                  "libs/extract/**/*.ts"
-                ]
+                "lintFilePatterns": ["libs/extract/**/*.ts"]
               },
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "configurations": {}
             },
             "test": {
@@ -4037,9 +3908,7 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/extract"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/extract"],
               "options": {
                 "jestConfig": "libs/extract/jest.config.ts",
                 "passWithNoTests": true
@@ -4052,10 +3921,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "extract:publish",
-                  "extract:github"
-                ]
+                "postTargets": ["extract:publish", "extract:github"]
               }
             },
             "github": {
@@ -4449,20 +4315,15 @@
         "data": {
           "name": "charts",
           "$schema": "../../node_modules/nx/schemas/project-schema.json",
-          "sourceRoot": "libs/charts/src",
+          "sourceRoot": "libs/green-charts/src",
           "projectType": "library",
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "nx:run-commands",
               "options": {
-                "outputPath": "dist/libs/charts",
+                "outputPath": "dist/libs/green-charts",
                 "commands": [
                   "nx run charts:build-lib",
                   "nx run charts:compile-scss",
@@ -4474,22 +4335,18 @@
             },
             "build-lib": {
               "executor": "@nrwl/web:rollup",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
-                "packageJson": "libs/charts/package.json",
-                "outputPath": "dist/libs/charts",
-                "tsConfig": "libs/charts/tsconfig.lib.json",
-                "project": "libs/charts/package.json",
-                "entryFile": "libs/charts/src/index.ts",
-                "external": [
-                  "react/jsx-runtime"
-                ],
+                "packageJson": "libs/green-charts/package.json",
+                "outputPath": "dist/libs/green-charts",
+                "tsConfig": "libs/green-charts/tsconfig.lib.json",
+                "project": "libs/green-charts/package.json",
+                "entryFile": "libs/green-charts/src/index.ts",
+                "external": ["react/jsx-runtime"],
                 "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
                 "assets": [
                   {
-                    "glob": "libs/charts/README.md",
+                    "glob": "libs/green-charts/README.md",
                     "input": ".",
                     "output": "."
                   }
@@ -4502,15 +4359,15 @@
                 "commands": [
                   {
                     "description": "compile scss",
-                    "command": "npx sass --no-source-map --load-path=node_modules/ --load-path=libs/chlorophyll/ libs/charts/scss/index.scss dist/libs/charts/css/green-charts.css"
+                    "command": "npx sass --no-source-map --load-path=node_modules/ --load-path=libs/chlorophyll/ libs/green-charts/scss/index.scss dist/libs/green-charts/css/green-charts.css"
                   },
                   {
                     "description": "auto prefix compiled css overwrite file and output maps",
-                    "command": "npx postcss dist/libs/charts/css/green-charts.css --use=autoprefixer -m -r"
+                    "command": "npx postcss dist/libs/green-charts/css/green-charts.css --use=autoprefixer -m -r"
                   },
                   {
                     "description": "minify compiled and auto prefixed css and output maps",
-                    "command": "npx postcss dist/libs/charts/css/green-charts.css --use=cssnano -m -o=dist/libs/charts/css/green-charts.min.css"
+                    "command": "npx postcss dist/libs/green-charts/css/green-charts.css --use=cssnano -m -o=dist/libs/green-charts/css/green-charts.min.css"
                   }
                 ],
                 "parallel": false,
@@ -4523,7 +4380,7 @@
                 "commands": [
                   {
                     "description": "copy scss",
-                    "command": "npx copyfiles libs/charts/scss/**/* dist/libs/charts/scss -f"
+                    "command": "npx copyfiles libs/green-charts/scss/**/* dist/libs/green-charts/scss -f"
                   }
                 ],
                 "parallel": false,
@@ -4531,18 +4388,11 @@
               }
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "options": {
-                "lintFilePatterns": [
-                  "libs/charts/**/*.ts"
-                ]
+                "lintFilePatterns": ["libs/green-charts/**/*.ts"]
               },
               "configurations": {}
             },
@@ -4553,11 +4403,9 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/charts"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/green-charts"],
               "options": {
-                "jestConfig": "libs/charts/jest.config.ts",
+                "jestConfig": "libs/green-charts/jest.config.ts",
                 "passWithNoTests": true
               },
               "configurations": {}
@@ -4582,10 +4430,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/green-${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "charts:publish",
-                  "charts:github"
-                ]
+                "postTargets": ["charts:publish", "charts:github"]
               }
             },
             "github": {
@@ -4602,32 +4447,32 @@
               }
             }
           },
-          "root": "libs/charts",
+          "root": "libs/green-charts",
           "implicitDependencies": [],
           "tags": [],
           "files": [
             {
-              "file": "libs/charts/.babelrc",
+              "file": "libs/green-charts/.babelrc",
               "hash": "4734508471883268701"
             },
             {
-              "file": "libs/charts/.eslintrc.json",
+              "file": "libs/green-charts/.eslintrc.json",
               "hash": "13800677001662881425"
             },
             {
-              "file": "libs/charts/.stylelintignore",
+              "file": "libs/green-charts/.stylelintignore",
               "hash": "12360834351849757395"
             },
             {
-              "file": "libs/charts/CHANGELOG.md",
+              "file": "libs/green-charts/CHANGELOG.md",
               "hash": "1555730935288902742"
             },
             {
-              "file": "libs/charts/jest.config.ts",
+              "file": "libs/green-charts/jest.config.ts",
               "hash": "210839210063428341"
             },
             {
-              "file": "libs/charts/package.json",
+              "file": "libs/green-charts/package.json",
               "hash": "4209445332925979721",
               "dependencies": [
                 {
@@ -4648,27 +4493,27 @@
               ]
             },
             {
-              "file": "libs/charts/project.json",
+              "file": "libs/green-charts/project.json",
               "hash": "5966626290211470692"
             },
             {
-              "file": "libs/charts/README.md",
+              "file": "libs/green-charts/README.md",
               "hash": "14814333206023652413"
             },
             {
-              "file": "libs/charts/scss/index.scss",
+              "file": "libs/green-charts/scss/index.scss",
               "hash": "13935358703354149361"
             },
             {
-              "file": "libs/charts/scss/mixins.scss",
+              "file": "libs/green-charts/scss/mixins.scss",
               "hash": "13574580424980867262"
             },
             {
-              "file": "libs/charts/src/index.ts",
+              "file": "libs/green-charts/src/index.ts",
               "hash": "3552240282930762949"
             },
             {
-              "file": "libs/charts/src/lib/billboard.spec.ts",
+              "file": "libs/green-charts/src/lib/billboard.spec.ts",
               "hash": "11870564810027138892",
               "dependencies": [
                 {
@@ -4679,7 +4524,7 @@
               ]
             },
             {
-              "file": "libs/charts/src/lib/billboard.ts",
+              "file": "libs/green-charts/src/lib/billboard.ts",
               "hash": "13592192523928159226",
               "dependencies": [
                 {
@@ -4690,7 +4535,7 @@
               ]
             },
             {
-              "file": "libs/charts/src/lib/billboardtypes.ts",
+              "file": "libs/green-charts/src/lib/billboardtypes.ts",
               "hash": "12352748414605041488",
               "dependencies": [
                 {
@@ -4701,15 +4546,15 @@
               ]
             },
             {
-              "file": "libs/charts/src/lib/index.ts",
+              "file": "libs/green-charts/src/lib/index.ts",
               "hash": "12288354427735761058"
             },
             {
-              "file": "libs/charts/src/lib/templates.ts",
+              "file": "libs/green-charts/src/lib/templates.ts",
               "hash": "15529971670888237186"
             },
             {
-              "file": "libs/charts/src/lib/types.ts",
+              "file": "libs/green-charts/src/lib/types.ts",
               "hash": "9894043429923214744",
               "dependencies": [
                 {
@@ -4720,15 +4565,15 @@
               ]
             },
             {
-              "file": "libs/charts/tsconfig.json",
+              "file": "libs/green-charts/tsconfig.json",
               "hash": "12834038490315927699"
             },
             {
-              "file": "libs/charts/tsconfig.lib.json",
+              "file": "libs/green-charts/tsconfig.lib.json",
               "hash": "7580554618943927439"
             },
             {
-              "file": "libs/charts/tsconfig.spec.json",
+              "file": "libs/green-charts/tsconfig.spec.json",
               "hash": "9945501297683122943"
             }
           ]
@@ -4740,36 +4585,27 @@
         "data": {
           "name": "react",
           "$schema": "../../node_modules/nx/schemas/project-schema.json",
-          "sourceRoot": "libs/react/src",
+          "sourceRoot": "libs/green-react/src",
           "projectType": "library",
           "tags": [],
           "targets": {
             "build": {
-              "dependsOn": [
-                "^build"
-              ],
-              "inputs": [
-                "production",
-                "^production"
-              ],
+              "dependsOn": ["^build"],
+              "inputs": ["production", "^production"],
               "executor": "@nrwl/rollup:rollup",
-              "outputs": [
-                "{options.outputPath}"
-              ],
+              "outputs": ["{options.outputPath}"],
               "options": {
-                "outputPath": "dist/libs/react",
-                "packageJson": "libs/react/package.json",
-                "tsConfig": "libs/react/tsconfig.lib.json",
-                "project": "libs/react/package.json",
-                "entryFile": "libs/react/src/index.ts",
-                "external": [
-                  "react/jsx-runtime"
-                ],
+                "outputPath": "dist/libs/green-react",
+                "packageJson": "libs/green-react/package.json",
+                "tsConfig": "libs/green-react/tsconfig.lib.json",
+                "project": "libs/green-react/package.json",
+                "entryFile": "libs/green-react/src/index.ts",
+                "external": ["react/jsx-runtime"],
                 "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
                 "updateBuildableProjectDepsInPackageJson": false,
                 "assets": [
                   {
-                    "glob": "libs/react/README.md",
+                    "glob": "libs/green-react/README.md",
                     "input": ".",
                     "output": "."
                   }
@@ -4778,19 +4614,12 @@
               "configurations": {}
             },
             "lint": {
-              "inputs": [
-                "default",
-                "{workspaceRoot}/.eslintrc.json"
-              ],
+              "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
               "executor": "@nrwl/linter:eslint",
               "options": {
-                "lintFilePatterns": [
-                  "libs/react/**/*.{ts,tsx,js,jsx}"
-                ]
+                "lintFilePatterns": ["libs/green-react/**/*.{ts,tsx,js,jsx}"]
               },
-              "outputs": [
-                "{options.outputFile}"
-              ],
+              "outputs": ["{options.outputFile}"],
               "configurations": {}
             },
             "test": {
@@ -4800,11 +4629,9 @@
                 "{workspaceRoot}/jest.preset.js"
               ],
               "executor": "@nrwl/jest:jest",
-              "outputs": [
-                "{workspaceRoot}/coverage/libs/react"
-              ],
+              "outputs": ["{workspaceRoot}/coverage/libs/green-react"],
               "options": {
-                "jestConfig": "libs/react/jest.config.ts",
+                "jestConfig": "libs/green-react/jest.config.ts",
                 "passWithNoTests": true
               },
               "configurations": {}
@@ -4814,7 +4641,7 @@
               "options": {
                 "uiFramework": "@storybook/react",
                 "port": 4200,
-                "configDir": "libs/react/.storybook"
+                "configDir": "libs/green-react/.storybook"
               },
               "configurations": {
                 "ci": {
@@ -4829,12 +4656,10 @@
                 "{workspaceRoot}/.storybook/**/*"
               ],
               "executor": "@nrwl/storybook:build",
-              "outputs": [
-                "{options.outputDir}"
-              ],
+              "outputs": ["{options.outputDir}"],
               "options": {
                 "uiFramework": "@storybook/react",
-                "configDir": "libs/react/.storybook",
+                "configDir": "libs/green-react/.storybook",
                 "outputDir": "dist/storybook/react"
               },
               "configurations": {
@@ -4879,10 +4704,7 @@
                 "commitMessageFormat": "chore(${projectName}): release version ${version}",
                 "tagPrefix": "@sebgroup/green-${projectName}@",
                 "push": true,
-                "postTargets": [
-                  "react:publish",
-                  "react:github"
-                ]
+                "postTargets": ["react:publish", "react:github"]
               }
             },
             "github": {
@@ -4899,27 +4721,27 @@
               }
             }
           },
-          "root": "libs/react",
+          "root": "libs/green-react",
           "implicitDependencies": [],
           "files": [
             {
-              "file": "libs/react/.babelrc",
+              "file": "libs/green-react/.babelrc",
               "hash": "17815086676730232616"
             },
             {
-              "file": "libs/react/.eslintrc.json",
+              "file": "libs/green-react/.eslintrc.json",
               "hash": "10075191527724852300"
             },
             {
-              "file": "libs/react/.storybook/main.js",
+              "file": "libs/green-react/.storybook/main.js",
               "hash": "10622919854543364906"
             },
             {
-              "file": "libs/react/.storybook/manager.js",
+              "file": "libs/green-react/.storybook/manager.js",
               "hash": "6033347247868701520"
             },
             {
-              "file": "libs/react/.storybook/postcss.config.js",
+              "file": "libs/green-react/.storybook/postcss.config.js",
               "hash": "16248560507441963794",
               "dependencies": [
                 {
@@ -4930,23 +4752,23 @@
               ]
             },
             {
-              "file": "libs/react/.storybook/preview.js",
+              "file": "libs/green-react/.storybook/preview.js",
               "hash": "2729772404095506026"
             },
             {
-              "file": "libs/react/.storybook/tsconfig.json",
+              "file": "libs/green-react/.storybook/tsconfig.json",
               "hash": "5039460197088629496"
             },
             {
-              "file": "libs/react/CHANGELOG.md",
+              "file": "libs/green-react/CHANGELOG.md",
               "hash": "230697128426171630"
             },
             {
-              "file": "libs/react/jest.config.ts",
+              "file": "libs/green-react/jest.config.ts",
               "hash": "16496289040155567151"
             },
             {
-              "file": "libs/react/package.json",
+              "file": "libs/green-react/package.json",
               "hash": "1424979250044268605",
               "dependencies": [
                 {
@@ -4977,27 +4799,27 @@
               ]
             },
             {
-              "file": "libs/react/project.json",
+              "file": "libs/green-react/project.json",
               "hash": "14084709475436912903"
             },
             {
-              "file": "libs/react/README.md",
+              "file": "libs/green-react/README.md",
               "hash": "11085185189961388970"
             },
             {
-              "file": "libs/react/src/index.ts",
+              "file": "libs/green-react/src/index.ts",
               "hash": "3066647624604003640"
             },
             {
-              "file": "libs/react/src/introduction/install.stories.mdx",
+              "file": "libs/green-react/src/introduction/install.stories.mdx",
               "hash": "8980217156200528933"
             },
             {
-              "file": "libs/react/src/introduction/use.stories.mdx",
+              "file": "libs/green-react/src/introduction/use.stories.mdx",
               "hash": "7398003942710893959"
             },
             {
-              "file": "libs/react/src/lib/accordion/accordion-item.tsx",
+              "file": "libs/green-react/src/lib/accordion/accordion-item.tsx",
               "hash": "4345912367110517436",
               "dependencies": [
                 {
@@ -5008,7 +4830,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/accordion/accordion.spec.tsx",
+              "file": "libs/green-react/src/lib/accordion/accordion.spec.tsx",
               "hash": "11399614754912202681",
               "dependencies": [
                 {
@@ -5029,11 +4851,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/accordion/accordion.stories.mdx",
+              "file": "libs/green-react/src/lib/accordion/accordion.stories.mdx",
               "hash": "14782673965696418700"
             },
             {
-              "file": "libs/react/src/lib/accordion/accordion.tsx",
+              "file": "libs/green-react/src/lib/accordion/accordion.tsx",
               "hash": "5219050411852079179",
               "dependencies": [
                 {
@@ -5049,7 +4871,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/alert-ribbon/alert-ribbon.spec.tsx",
+              "file": "libs/green-react/src/lib/alert-ribbon/alert-ribbon.spec.tsx",
               "hash": "17612616999530955774",
               "dependencies": [
                 {
@@ -5060,11 +4882,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/alert-ribbon/alert-ribbon.stories.mdx",
+              "file": "libs/green-react/src/lib/alert-ribbon/alert-ribbon.stories.mdx",
               "hash": "18136683998341550162"
             },
             {
-              "file": "libs/react/src/lib/alert-ribbon/alert-ribbon.tsx",
+              "file": "libs/green-react/src/lib/alert-ribbon/alert-ribbon.tsx",
               "hash": "11631002027723240062",
               "dependencies": [
                 {
@@ -5080,7 +4902,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/badge/badge.spec.tsx",
+              "file": "libs/green-react/src/lib/badge/badge.spec.tsx",
               "hash": "9694281555679101606",
               "dependencies": [
                 {
@@ -5091,11 +4913,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/badge/badge.stories.mdx",
+              "file": "libs/green-react/src/lib/badge/badge.stories.mdx",
               "hash": "10594921497869481390"
             },
             {
-              "file": "libs/react/src/lib/badge/badge.tsx",
+              "file": "libs/green-react/src/lib/badge/badge.tsx",
               "hash": "14562038937376101838",
               "dependencies": [
                 {
@@ -5111,7 +4933,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/card/card.spec.tsx",
+              "file": "libs/green-react/src/lib/card/card.spec.tsx",
               "hash": "16345174126432350768",
               "dependencies": [
                 {
@@ -5122,11 +4944,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/card/card.stories.mdx",
+              "file": "libs/green-react/src/lib/card/card.stories.mdx",
               "hash": "17053717075667899356"
             },
             {
-              "file": "libs/react/src/lib/card/card.tsx",
+              "file": "libs/green-react/src/lib/card/card.tsx",
               "hash": "12309316552871702155",
               "dependencies": [
                 {
@@ -5137,7 +4959,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/datepicker/datepicker.spec.tsx",
+              "file": "libs/green-react/src/lib/datepicker/datepicker.spec.tsx",
               "hash": "4835985188152921942",
               "dependencies": [
                 {
@@ -5158,11 +4980,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/datepicker/datepicker.stories.mdx",
+              "file": "libs/green-react/src/lib/datepicker/datepicker.stories.mdx",
               "hash": "16236821232506746557"
             },
             {
-              "file": "libs/react/src/lib/datepicker/datepicker.tsx",
+              "file": "libs/green-react/src/lib/datepicker/datepicker.tsx",
               "hash": "4759412417714352187",
               "dependencies": [
                 {
@@ -5178,7 +5000,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/datepicker/hook.ts",
+              "file": "libs/green-react/src/lib/datepicker/hook.ts",
               "hash": "6766577306884301927",
               "dependencies": [
                 {
@@ -5194,7 +5016,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/dropdown/dropdown.spec.tsx",
+              "file": "libs/green-react/src/lib/dropdown/dropdown.spec.tsx",
               "hash": "4831284280386025320",
               "dependencies": [
                 {
@@ -5210,11 +5032,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/dropdown/dropdown.stories.mdx",
+              "file": "libs/green-react/src/lib/dropdown/dropdown.stories.mdx",
               "hash": "9480903281441145972"
             },
             {
-              "file": "libs/react/src/lib/dropdown/dropdown.tsx",
+              "file": "libs/green-react/src/lib/dropdown/dropdown.tsx",
               "hash": "7423901823768069301",
               "dependencies": [
                 {
@@ -5230,7 +5052,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/dropdown/hooks.ts",
+              "file": "libs/green-react/src/lib/dropdown/hooks.ts",
               "hash": "12530123122823906815",
               "dependencies": [
                 {
@@ -5246,7 +5068,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/button/button.spec.tsx",
+              "file": "libs/green-react/src/lib/form/button/button.spec.tsx",
               "hash": "6984324300409398013",
               "dependencies": [
                 {
@@ -5257,11 +5079,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/button/button.stories.mdx",
+              "file": "libs/green-react/src/lib/form/button/button.stories.mdx",
               "hash": "5039000463731271420"
             },
             {
-              "file": "libs/react/src/lib/form/button/button.tsx",
+              "file": "libs/green-react/src/lib/form/button/button.tsx",
               "hash": "4536622496964092452",
               "dependencies": [
                 {
@@ -5277,11 +5099,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/buttonGroup/buttonGroup.stories.mdx",
+              "file": "libs/green-react/src/lib/form/buttonGroup/buttonGroup.stories.mdx",
               "hash": "9201577204119186988"
             },
             {
-              "file": "libs/react/src/lib/form/buttonGroup/buttonGroup.test.tsx",
+              "file": "libs/green-react/src/lib/form/buttonGroup/buttonGroup.test.tsx",
               "hash": "4678247442581818867",
               "dependencies": [
                 {
@@ -5292,7 +5114,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/buttonGroup/buttonGroup.tsx",
+              "file": "libs/green-react/src/lib/form/buttonGroup/buttonGroup.tsx",
               "hash": "13830960029959679225",
               "dependencies": [
                 {
@@ -5308,11 +5130,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/checkbox/checkbox.stories.mdx",
+              "file": "libs/green-react/src/lib/form/checkbox/checkbox.stories.mdx",
               "hash": "12522791637435787116"
             },
             {
-              "file": "libs/react/src/lib/form/form.spec.tsx",
+              "file": "libs/green-react/src/lib/form/form.spec.tsx",
               "hash": "18179066954054853163",
               "dependencies": [
                 {
@@ -5328,11 +5150,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/form.stories.mdx",
+              "file": "libs/green-react/src/lib/form/form.stories.mdx",
               "hash": "16669429166741976341"
             },
             {
-              "file": "libs/react/src/lib/form/form.tsx",
+              "file": "libs/green-react/src/lib/form/form.tsx",
               "hash": "4095692235571882779",
               "dependencies": [
                 {
@@ -5348,7 +5170,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/formContext.spec.tsx",
+              "file": "libs/green-react/src/lib/form/formContext.spec.tsx",
               "hash": "3139025085131314860",
               "dependencies": [
                 {
@@ -5359,7 +5181,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/formContext.tsx",
+              "file": "libs/green-react/src/lib/form/formContext.tsx",
               "hash": "9790966214342780601",
               "dependencies": [
                 {
@@ -5370,7 +5192,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/formItems.spec.tsx",
+              "file": "libs/green-react/src/lib/form/formItems.spec.tsx",
               "hash": "9762961389622199422",
               "dependencies": [
                 {
@@ -5381,7 +5203,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/formItems.tsx",
+              "file": "libs/green-react/src/lib/form/formItems.tsx",
               "hash": "241656764291084073",
               "dependencies": [
                 {
@@ -5397,7 +5219,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/group/group.spec.tsx",
+              "file": "libs/green-react/src/lib/form/group/group.spec.tsx",
               "hash": "6897225444042452277",
               "dependencies": [
                 {
@@ -5408,11 +5230,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/group/group.stories.mdx",
+              "file": "libs/green-react/src/lib/form/group/group.stories.mdx",
               "hash": "9004436412552311628"
             },
             {
-              "file": "libs/react/src/lib/form/group/group.tsx",
+              "file": "libs/green-react/src/lib/form/group/group.tsx",
               "hash": "17990214923365850165",
               "dependencies": [
                 {
@@ -5423,11 +5245,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/iconButton/iconButton.stories.mdx",
+              "file": "libs/green-react/src/lib/form/iconButton/iconButton.stories.mdx",
               "hash": "3803259618662619841"
             },
             {
-              "file": "libs/react/src/lib/form/iconButton/iconButton.tsx",
+              "file": "libs/green-react/src/lib/form/iconButton/iconButton.tsx",
               "hash": "8475809380197337597",
               "dependencies": [
                 {
@@ -5438,11 +5260,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/index.ts",
+              "file": "libs/green-react/src/lib/form/index.ts",
               "hash": "15198429061088828264"
             },
             {
-              "file": "libs/react/src/lib/form/input/input.spec.tsx",
+              "file": "libs/green-react/src/lib/form/input/input.spec.tsx",
               "hash": "9094537543773886391",
               "dependencies": [
                 {
@@ -5453,11 +5275,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/input/input.stories.mdx",
+              "file": "libs/green-react/src/lib/form/input/input.stories.mdx",
               "hash": "11319168670245576408"
             },
             {
-              "file": "libs/react/src/lib/form/input/input.tsx",
+              "file": "libs/green-react/src/lib/form/input/input.tsx",
               "hash": "16019927226311767939",
               "dependencies": [
                 {
@@ -5478,11 +5300,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/radioButton/radioButton.stories.mdx",
+              "file": "libs/green-react/src/lib/form/radioButton/radioButton.stories.mdx",
               "hash": "5948850238133136730"
             },
             {
-              "file": "libs/react/src/lib/form/radioButton/radioGroup.spec.tsx",
+              "file": "libs/green-react/src/lib/form/radioButton/radioGroup.spec.tsx",
               "hash": "10723047561874623758",
               "dependencies": [
                 {
@@ -5503,11 +5325,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/radioButton/radioGroup.stories.mdx",
+              "file": "libs/green-react/src/lib/form/radioButton/radioGroup.stories.mdx",
               "hash": "16740930419239399002"
             },
             {
-              "file": "libs/react/src/lib/form/radioButton/radioGroup.tsx",
+              "file": "libs/green-react/src/lib/form/radioButton/radioGroup.tsx",
               "hash": "11705953528028626598",
               "dependencies": [
                 {
@@ -5528,7 +5350,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/text/text.spec.tsx",
+              "file": "libs/green-react/src/lib/form/text/text.spec.tsx",
               "hash": "1964164222509447229",
               "dependencies": [
                 {
@@ -5539,11 +5361,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/text/text.stories.mdx",
+              "file": "libs/green-react/src/lib/form/text/text.stories.mdx",
               "hash": "17532992507440062288"
             },
             {
-              "file": "libs/react/src/lib/form/text/text.tsx",
+              "file": "libs/green-react/src/lib/form/text/text.tsx",
               "hash": "15581433031094178850",
               "dependencies": [
                 {
@@ -5554,7 +5376,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/types.ts",
+              "file": "libs/green-react/src/lib/form/types.ts",
               "hash": "9831337269623365950",
               "dependencies": [
                 {
@@ -5570,7 +5392,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/useInput.ts",
+              "file": "libs/green-react/src/lib/form/useInput.ts",
               "hash": "3241576173697102667",
               "dependencies": [
                 {
@@ -5586,11 +5408,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/form/validateInput.spec.tsx",
+              "file": "libs/green-react/src/lib/form/validateInput.spec.tsx",
               "hash": "4423648368348875170"
             },
             {
-              "file": "libs/react/src/lib/form/validateInput.ts",
+              "file": "libs/green-react/src/lib/form/validateInput.ts",
               "hash": "7080314860994973869",
               "dependencies": [
                 {
@@ -5601,7 +5423,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/formItem/formItem.spec.tsx",
+              "file": "libs/green-react/src/lib/formItem/formItem.spec.tsx",
               "hash": "15870536044387260196",
               "dependencies": [
                 {
@@ -5622,11 +5444,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/formItem/formItem.stories.mdx",
+              "file": "libs/green-react/src/lib/formItem/formItem.stories.mdx",
               "hash": "16269742965138943278"
             },
             {
-              "file": "libs/react/src/lib/formItem/formItem.tsx",
+              "file": "libs/green-react/src/lib/formItem/formItem.tsx",
               "hash": "14946673687011917034",
               "dependencies": [
                 {
@@ -5647,11 +5469,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/formItem/index.ts",
+              "file": "libs/green-react/src/lib/formItem/index.ts",
               "hash": "17229249783999457302"
             },
             {
-              "file": "libs/react/src/lib/icons/bankId.tsx",
+              "file": "libs/green-react/src/lib/icons/bankId.tsx",
               "hash": "8071348611883965089",
               "dependencies": [
                 {
@@ -5662,7 +5484,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/check.tsx",
+              "file": "libs/green-react/src/lib/icons/check.tsx",
               "hash": "16410699500548869636",
               "dependencies": [
                 {
@@ -5678,7 +5500,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/chevronDown.tsx",
+              "file": "libs/green-react/src/lib/icons/chevronDown.tsx",
               "hash": "9498247865861408179",
               "dependencies": [
                 {
@@ -5694,11 +5516,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/index.ts",
+              "file": "libs/green-react/src/lib/icons/index.ts",
               "hash": "12436850509077155771"
             },
             {
-              "file": "libs/react/src/lib/icons/infoCircle.tsx",
+              "file": "libs/green-react/src/lib/icons/infoCircle.tsx",
               "hash": "15735153525900493942",
               "dependencies": [
                 {
@@ -5714,7 +5536,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/square-exclamation.tsx",
+              "file": "libs/green-react/src/lib/icons/square-exclamation.tsx",
               "hash": "14176997472193800180",
               "dependencies": [
                 {
@@ -5730,7 +5552,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/square-info.tsx",
+              "file": "libs/green-react/src/lib/icons/square-info.tsx",
               "hash": "12266213200645663188",
               "dependencies": [
                 {
@@ -5741,7 +5563,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/icons/times.tsx",
+              "file": "libs/green-react/src/lib/icons/times.tsx",
               "hash": "2949910747596660074",
               "dependencies": [
                 {
@@ -5752,7 +5574,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/layout/flexbox/flexbox.spec.tsx",
+              "file": "libs/green-react/src/lib/layout/flexbox/flexbox.spec.tsx",
               "hash": "10640364655211515518",
               "dependencies": [
                 {
@@ -5763,11 +5585,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/layout/flexbox/flexbox.stories.mdx",
+              "file": "libs/green-react/src/lib/layout/flexbox/flexbox.stories.mdx",
               "hash": "9373867868668204762"
             },
             {
-              "file": "libs/react/src/lib/layout/flexbox/flexbox.tsx",
+              "file": "libs/green-react/src/lib/layout/flexbox/flexbox.tsx",
               "hash": "11910558312845345663",
               "dependencies": [
                 {
@@ -5778,15 +5600,15 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/layout/flexbox/types.ts",
+              "file": "libs/green-react/src/lib/layout/flexbox/types.ts",
               "hash": "11915995041005905009"
             },
             {
-              "file": "libs/react/src/lib/layout/index.ts",
+              "file": "libs/green-react/src/lib/layout/index.ts",
               "hash": "4824694098819019176"
             },
             {
-              "file": "libs/react/src/lib/link/link.spec.tsx",
+              "file": "libs/green-react/src/lib/link/link.spec.tsx",
               "hash": "7309876551437649783",
               "dependencies": [
                 {
@@ -5797,11 +5619,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/link/link.stories.mdx",
+              "file": "libs/green-react/src/lib/link/link.stories.mdx",
               "hash": "10095256501696409452"
             },
             {
-              "file": "libs/react/src/lib/link/link.tsx",
+              "file": "libs/green-react/src/lib/link/link.tsx",
               "hash": "17614832745505880584",
               "dependencies": [
                 {
@@ -5817,11 +5639,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/index.ts",
+              "file": "libs/green-react/src/lib/list/index.ts",
               "hash": "14738032183869023854"
             },
             {
-              "file": "libs/react/src/lib/list/list.spec.tsx",
+              "file": "libs/green-react/src/lib/list/list.spec.tsx",
               "hash": "70895109483376073",
               "dependencies": [
                 {
@@ -5832,11 +5654,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/list.stories.mdx",
+              "file": "libs/green-react/src/lib/list/list.stories.mdx",
               "hash": "13730910117954954958"
             },
             {
-              "file": "libs/react/src/lib/list/list.tsx",
+              "file": "libs/green-react/src/lib/list/list.tsx",
               "hash": "16557404294040716903",
               "dependencies": [
                 {
@@ -5852,7 +5674,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/listItem.spec.tsx",
+              "file": "libs/green-react/src/lib/list/listItem.spec.tsx",
               "hash": "16638274040698885749",
               "dependencies": [
                 {
@@ -5863,7 +5685,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/listItem.tsx",
+              "file": "libs/green-react/src/lib/list/listItem.tsx",
               "hash": "194680456127130325",
               "dependencies": [
                 {
@@ -5879,7 +5701,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/valueList.spec.tsx",
+              "file": "libs/green-react/src/lib/list/valueList.spec.tsx",
               "hash": "10307610172636969068",
               "dependencies": [
                 {
@@ -5890,11 +5712,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/list/valueList.stories.mdx",
+              "file": "libs/green-react/src/lib/list/valueList.stories.mdx",
               "hash": "830252863714391328"
             },
             {
-              "file": "libs/react/src/lib/list/valueList.tsx",
+              "file": "libs/green-react/src/lib/list/valueList.tsx",
               "hash": "11223565301980059262",
               "dependencies": [
                 {
@@ -5905,7 +5727,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/modal/modal.spec.tsx",
+              "file": "libs/green-react/src/lib/modal/modal.spec.tsx",
               "hash": "661090169253778236",
               "dependencies": [
                 {
@@ -5921,7 +5743,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/modal/modal.stories.tsx",
+              "file": "libs/green-react/src/lib/modal/modal.stories.tsx",
               "hash": "13048240356157142500",
               "dependencies": [
                 {
@@ -5937,7 +5759,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/modal/modal.tsx",
+              "file": "libs/green-react/src/lib/modal/modal.tsx",
               "hash": "5543562345292823952",
               "dependencies": [
                 {
@@ -5953,7 +5775,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/navbar/navbar.spec.tsx",
+              "file": "libs/green-react/src/lib/navbar/navbar.spec.tsx",
               "hash": "3099000541702467100",
               "dependencies": [
                 {
@@ -5964,11 +5786,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/navbar/navbar.stories.mdx",
+              "file": "libs/green-react/src/lib/navbar/navbar.stories.mdx",
               "hash": "6212777154032883478"
             },
             {
-              "file": "libs/react/src/lib/navbar/navbar.tsx",
+              "file": "libs/green-react/src/lib/navbar/navbar.tsx",
               "hash": "15920853901259328478",
               "dependencies": [
                 {
@@ -5984,11 +5806,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/select/index.ts",
+              "file": "libs/green-react/src/lib/select/index.ts",
               "hash": "5245332160821927507"
             },
             {
-              "file": "libs/react/src/lib/select/select.spec.tsx",
+              "file": "libs/green-react/src/lib/select/select.spec.tsx",
               "hash": "10005202363467269539",
               "dependencies": [
                 {
@@ -6009,11 +5831,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/select/select.stories.mdx",
+              "file": "libs/green-react/src/lib/select/select.stories.mdx",
               "hash": "2866768374771900981"
             },
             {
-              "file": "libs/react/src/lib/select/select.tsx",
+              "file": "libs/green-react/src/lib/select/select.tsx",
               "hash": "6701144512569668686",
               "dependencies": [
                 {
@@ -6029,15 +5851,15 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/slider/index.ts",
+              "file": "libs/green-react/src/lib/slider/index.ts",
               "hash": "3086497784023181532"
             },
             {
-              "file": "libs/react/src/lib/slider/slider.stories.mdx",
+              "file": "libs/green-react/src/lib/slider/slider.stories.mdx",
               "hash": "1494579550142297326"
             },
             {
-              "file": "libs/react/src/lib/slider/slider.tsx",
+              "file": "libs/green-react/src/lib/slider/slider.tsx",
               "hash": "6322582394837348322",
               "dependencies": [
                 {
@@ -6053,7 +5875,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/stepper/hook.ts",
+              "file": "libs/green-react/src/lib/stepper/hook.ts",
               "hash": "14880363681435645610",
               "dependencies": [
                 {
@@ -6069,7 +5891,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/stepper/stepper.spec.tsx",
+              "file": "libs/green-react/src/lib/stepper/stepper.spec.tsx",
               "hash": "18120787808482694378",
               "dependencies": [
                 {
@@ -6085,11 +5907,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/stepper/stepper.stories.mdx",
+              "file": "libs/green-react/src/lib/stepper/stepper.stories.mdx",
               "hash": "7541542666701616903"
             },
             {
-              "file": "libs/react/src/lib/stepper/stepper.tsx",
+              "file": "libs/green-react/src/lib/stepper/stepper.tsx",
               "hash": "8654600068988645734",
               "dependencies": [
                 {
@@ -6105,7 +5927,7 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/tabs/tabs.spec.tsx",
+              "file": "libs/green-react/src/lib/tabs/tabs.spec.tsx",
               "hash": "16220977719226249089",
               "dependencies": [
                 {
@@ -6116,11 +5938,11 @@
               ]
             },
             {
-              "file": "libs/react/src/lib/tabs/tabs.stories.mdx",
+              "file": "libs/green-react/src/lib/tabs/tabs.stories.mdx",
               "hash": "6514781221614566256"
             },
             {
-              "file": "libs/react/src/lib/tabs/tabs.tsx",
+              "file": "libs/green-react/src/lib/tabs/tabs.tsx",
               "hash": "17767968551709818928",
               "dependencies": [
                 {
@@ -6131,23 +5953,23 @@
               ]
             },
             {
-              "file": "libs/react/src/types/index.ts",
+              "file": "libs/green-react/src/types/index.ts",
               "hash": "8719896815810057729"
             },
             {
-              "file": "libs/react/src/types/props/index.ts",
+              "file": "libs/green-react/src/types/props/index.ts",
               "hash": "10664138414923094849"
             },
             {
-              "file": "libs/react/tsconfig.json",
+              "file": "libs/green-react/tsconfig.json",
               "hash": "12511190674594120915"
             },
             {
-              "file": "libs/react/tsconfig.lib.json",
+              "file": "libs/green-react/tsconfig.lib.json",
               "hash": "3424905492853027833"
             },
             {
-              "file": "libs/react/tsconfig.spec.json",
+              "file": "libs/green-react/tsconfig.spec.json",
               "hash": "17008442270085404607"
             }
           ]

@@ -6,6 +6,6 @@ export default {
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/react/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/react',
+  coverageDirectory: '../../coverage/libs/green-react',
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 }
