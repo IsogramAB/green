@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.1.2](https://github.com/splashdust/green/compare/@sebgroup/green-angular-charts@1.1.1...@sebgroup/green-angular-charts@1.1.2) (2023-03-24)
+
+### Dependency Updates
+
+* `charts` updated to version `1.1.2`
+* `chlorophyll` updated to version `1.0.0`
+
+
 ## [1.1.1](https://github.com/splashdust/green/compare/@sebgroup/green-angular-charts@1.1.0...@sebgroup/green-angular-charts@1.1.1) (2023-03-24)
 
 ### Dependency Updates
