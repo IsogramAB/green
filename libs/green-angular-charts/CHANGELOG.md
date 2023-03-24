@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## 0.0.1 (2023-03-24)
+
+### Dependency Updates
+
+* `green-charts` updated to version `0.0.1`
+
+
 # [1.2.0](https://github.com/splashdust/green/compare/@sebgroup/green-angular-charts@1.1.2...@sebgroup/green-angular-charts@1.2.0) (2023-03-24)
 
 ### Dependency Updates
