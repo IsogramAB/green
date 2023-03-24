@@ -1,6 +1,6 @@
 {
   "name": "@sebgroup/green-angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/cdk": ">=12",
     "@angular/common": ">=12",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@sebgroup/chlorophyll": "^1.0.0",
-    "@sebgroup/extract": "^1.0.0",
+    "@sebgroup/extract": "^1.1.0",
     "tslib": "^2.3.1"
   },
   "description": "Angular components built on top of @sebgroup/chlorophyll.",
