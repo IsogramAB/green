@@ -14,13 +14,14 @@ export default async function updateDeps(
 ): Promise<{ success: boolean }> {
   console.info(`Executing "update-deps"...`)
 
-  const npmScope = context.workspace.npmScope
-  const libName = context.projectName
+  const npmScope = context.workspace?.npmScope
+  const libName = context.projectName || ''
 
   // Use the project graph to get the list of dependencies
-  const graph_deps = context.projectGraph.dependencies[libName].filter(
-    (d) => !d.target.startsWith('npm:')
-  )
+  const graph_deps =
+    context.projectGraph?.dependencies[libName].filter(
+      (d) => !d.target.startsWith('npm:')
+    ) || []
 
   // Construct npm dependency specifiers for each dependency
   const latest_dep_versions = graph_deps
