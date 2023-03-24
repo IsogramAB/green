@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.20.0](https://github.com/splashdust/green/compare/@sebgroup/extract@1.19.0...@sebgroup/extract@1.20.0) (2023-03-24)
+
+
+### Features
+
+* a change ([2640179](https://github.com/splashdust/green/commit/2640179a47a46e0a3df62b95a1857183c6040ee5))
+
+
+
 # [1.19.0](https://github.com/splashdust/green/compare/@sebgroup/extract@1.18.0...@sebgroup/extract@1.19.0) (2023-03-24)
 
 
