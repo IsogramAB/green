@@ -1,35 +1,62 @@
 import type { ExecutorContext } from '@nrwl/devkit'
-import { exec } from 'child_process'
-import { promisify } from 'util'
+import { writeFile } from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 
-const fs = require('fs')
+type DepSpecs = {
+  [name: string]: string
+}
 
 export interface UpdateDepsExecutorOptions {}
 
 export default async function updateDeps(
-  options: UpdateDepsExecutorOptions,
+  _: UpdateDepsExecutorOptions,
   context: ExecutorContext
 ): Promise<{ success: boolean }> {
   console.info(`Executing "update-deps"...`)
 
-  // console.log(
-  //   'Context: ',
-  //   context.projectGraph.dependencies['react'].filter(
-  //     (d) => !d.target.startsWith('npm:')
-  //   )
-  // )
+  const npmScope = context.workspace.npmScope
+  const libName = context.projectName
 
-  console.log('Context: ', context)
-
-  const pkg = JSON.parse(
-    fs.readFileSync(`libs/${context.projectName}/package.json`)
+  // Use the project graph to get the list of dependencies
+  const graph_deps = context.projectGraph.dependencies[libName].filter(
+    (d) => !d.target.startsWith('npm:')
   )
-  console.log(`existing package.json for ${context.projectName}`, pkg)
 
-  const { stdout, stderr } = await promisify(exec)(`echo "hello world"`)
-  console.log(stdout)
-  console.error(stderr)
+  // Construct npm dependency specifiers for each dependency
+  const latest_dep_versions = graph_deps
+    .map((d) => ({
+      [`@${npmScope}/${d.target}`]: `^${getLibPkgJson(d.target).version}`,
+    }))
+    .reduce((acc, cur) => ({ ...acc, ...cur }), {})
 
-  const success = !stderr
-  return { success }
+  // Generate updated package.json
+  const updatedPkgJson = pkgJsonWithUpdatedDeps(
+    getLibPkgJson(libName),
+    latest_dep_versions
+  )
+
+  // Write updated package.json to file
+  try {
+    await writeFile(
+      `libs/${libName}/package.json`,
+      JSON.stringify(updatedPkgJson, null, 2)
+    )
+    return { success: true }
+  } catch {
+    return { success: false }
+  }
+}
+
+function getLibPkgJson(libName: string): any {
+  return JSON.parse(readFileSync(`libs/${libName}/package.json`).toString())
+}
+
+function pkgJsonWithUpdatedDeps(pkgJson: any, deps: DepSpecs): any {
+  return {
+    ...pkgJson,
+    dependencies: {
+      ...pkgJson.dependencies,
+      ...deps,
+    },
+  }
 }
