@@ -14,6 +14,18 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 
 
+# [1.2.0](https://github.com/splashdust/green/compare/@sebgroup/green-angular-charts@1.1.2...@sebgroup/green-angular-charts@1.2.0) (2023-03-24)
+
+### Dependency Updates
+
+* `charts` updated to version `1.1.3`
+
+### Features
+
+* asd ([c5b2e15](https://github.com/splashdust/green/commit/c5b2e15639083eb8e5592463c9206d3ba86ae8bd))
+
+
+
 ## [1.1.2](https://github.com/splashdust/green/compare/@sebgroup/green-angular-charts@1.1.1...@sebgroup/green-angular-charts@1.1.2) (2023-03-24)
 
 ### Dependency Updates
