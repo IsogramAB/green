@@ -1,5 +1,5 @@
 {
-  "name": "@sebgroup/react",
+  "name": "@sebgroup/green-react",
   "version": "1.3.5",
   "peerDependencies": {
     "react": "^17 || ^18",
