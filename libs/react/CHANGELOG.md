@@ -21,6 +21,25 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 
 
+# [1.3.0](https://github.com/splashdust/green/compare/@sebgroup/green-react@1.2.1...@sebgroup/green-react@1.3.0) (2023-03-24)
+
+### Dependency Updates
+
+* `chlorophyll` updated to version `1.0.0`
+* `extract` updated to version `1.0.0`
+
+### Bug Fixes
+
+* bump package versions ([#800](https://github.com/splashdust/green/issues/800)) ([ec5eb19](https://github.com/splashdust/green/commit/ec5eb19c89f94aa4a322d762138806bedaa176e3))
+
+
+### Features
+
+* 🎸 new slider component for react ([8ba92b9](https://github.com/splashdust/green/commit/8ba92b9e24f51450cc559c54503a0d29a1349f02))
+* newstuff ([1ab30e8](https://github.com/splashdust/green/commit/1ab30e84a6e466874eea6a2390772a54dd919c42))
+
+
+
 # [1.3.0](https://github.com/splashdust/green/compare/@sebgroup/green-react@1.2.1...@sebgroup/green-react@1.3.0) (2023-03-22)
 
 ### Dependency Updates
