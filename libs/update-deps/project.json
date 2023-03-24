@@ -1,0 +1,67 @@
+{
+  "name": "update-deps",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/update-deps/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/update-deps",
+        "main": "libs/update-deps/src/index.ts",
+        "tsConfig": "libs/update-deps/tsconfig.lib.json",
+        "assets": [
+          "libs/update-deps/*.md",
+          {
+            "input": "./libs/update-deps/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/update-deps/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./libs/update-deps",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./libs/update-deps",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/update-deps/**/*.ts",
+          "libs/update-deps/generators.json",
+          "libs/update-deps/executors.json",
+          "libs/update-deps/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/update-deps/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
