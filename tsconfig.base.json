@@ -18,12 +18,14 @@
       "@sebgroup/update-deps": ["libs/update-deps/src/index.ts"],
       "@sebgroup/chlorophyll": ["libs/chlorophyll/src/index.ts"],
       "@sebgroup/extract": ["libs/extract/src/index.ts"],
-      "@sebgroup/green-angular": ["libs/angular/src/index.ts"],
-      "@sebgroup/green-angular-charts": ["libs/angular-charts/src/index.ts"],
-      "@sebgroup/green-angular-dev/*": ["apps/angular-lib-dev/*"],
-      "@sebgroup/green-charts": ["libs/charts/src/index.ts"],
-      "@sebgroup/green-react": ["libs/react/src/index.ts"],
-      "@sebgroup/green-react-charts": ["libs/react-charts/src/index.ts"]
+      "@sebgroup/green-angular": ["libs/green-angular/src/index.ts"],
+      "@sebgroup/green-angular-charts": [
+        "libs/green-angular-charts/src/index.ts"
+      ],
+      "@sebgroup/green-angular-dev/*": ["apps/green-angular-lib-dev/*"],
+      "@sebgroup/green-charts": ["libs/green-charts/src/index.ts"],
+      "@sebgroup/green-react": ["libs/green-react/src/index.ts"],
+      "@sebgroup/green-react-charts": ["libs/green-react-charts/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
