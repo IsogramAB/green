@@ -8,7 +8,6 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 ### Features
 
 * another change ([474e488](https://github.com/IsogramAB/green/commit/474e488a534dab7018e66017669e7e753b4a87b8))
-* main change ([13ffb15](https://github.com/IsogramAB/green/commit/13ffb157439bdbb2a46ef693004af8f85b0239e1))
 
 
 
