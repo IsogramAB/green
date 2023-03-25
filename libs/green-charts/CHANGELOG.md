@@ -4,6 +4,10 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [1.1.8](https://github.com/IsogramAB/green/compare/@sebgroup/green-charts@1.1.7...@sebgroup/green-charts@1.1.8) (2023-03-25)
 
+
+
+## [1.1.8](https://github.com/IsogramAB/green/compare/@sebgroup/green-charts@1.1.7...@sebgroup/green-charts@1.1.8) (2023-03-25)
+
 ### Dependency Updates
 
 * `chlorophyll` updated to version `1.5.7`
