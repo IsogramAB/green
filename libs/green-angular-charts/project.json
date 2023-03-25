@@ -88,7 +88,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
-        "push": false,
+        "push": true,
         "tagPrefix": "@sebgroup/${projectName}@",
         "trackDeps": true,
         "postTargets": ["green-angular-charts:github"]

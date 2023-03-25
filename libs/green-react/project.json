@@ -98,7 +98,7 @@
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
         "tagPrefix": "@sebgroup/${projectName}@",
-        "push": false,
+        "push": true,
         "trackDeps": true,
         "postTargets": ["green-react:github"]
       }
