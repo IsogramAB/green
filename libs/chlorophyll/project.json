@@ -90,7 +90,8 @@
         "commitMessageFormat": "chore(${projectName}): release version ${version}",
         "tagPrefix": "@sebgroup/${projectName}@",
         "push": false,
-        "trackDeps": true
+        "trackDeps": true,
+        "postTargets": ["chlorophyll:github"]
       }
     },
     "github": {
