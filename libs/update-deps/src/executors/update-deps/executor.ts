@@ -40,7 +40,7 @@ export default async function updateDeps(
   try {
     await writeFile(
       `libs/${libName}/package.json`,
-      JSON.stringify(updatedPkgJson, null, 2)
+      JSON.stringify(updatedPkgJson, null, 2) + '\n'
     )
     return { success: true }
   } catch {
