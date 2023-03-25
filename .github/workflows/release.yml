@@ -45,7 +45,7 @@ jobs:
         run: yarn install --prefer-offline --frozen-lockfile --silent
 
       - name: Release ALL the libs!
-        run: npx nx run-many --all -target prepare-release --parallel=1
+        run: npx nx run-many --all -target prepare-release --parallel=1 skipCommitTypes=docs,ci,chore,style,test,perf,refactor,build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
