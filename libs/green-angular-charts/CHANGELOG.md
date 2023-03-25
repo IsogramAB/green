@@ -2,6 +2,10 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.2.5](https://github.com/IsogramAB/green/compare/@sebgroup/green-angular-charts@1.2.4...@sebgroup/green-angular-charts@1.2.5) (2023-03-25)
+
+
+
 ## [1.2.4](https://github.com/IsogramAB/green/compare/@sebgroup/green-angular-charts@1.2.3...@sebgroup/green-angular-charts@1.2.4) (2023-03-25)
 
 ### Dependency Updates
