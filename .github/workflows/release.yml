@@ -13,21 +13,21 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '14'
 
       - name: Configure Git
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - name: Add auth to .npmrc
-        run: |
-          echo '
-            registry=https://registry.npmjs.org
-            always-auth=true
-            //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-          ' >> .npmrc
-        shell: bash
+      # - name: Add auth to .npmrc
+      #   run: |
+      #     echo '
+      #       registry=https://registry.npmjs.org
+      #       always-auth=true
+      #       //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+      #     ' >> .npmrc
+      #   shell: bash
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -44,23 +44,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --prefer-offline --frozen-lockfile --silent
 
-      - name: Prepare release of chlorophyll and extract
-        run: npx nx run-many --target=version --projects=chlorophyll,extract --baseBranch='main' --origin='origin' --parallel=1
+      - name: Release ALL the libs!
+        run: npx nx run-many --all -target prepare-release --parallel=1
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          HUSKY: 0
-
-      - name: Prepare release of charts
-        run: npx nx run-many --target=prepare-release --projects=charts --baseBranch='main' --origin='origin' --parallel=1
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          HUSKY: 0
-
-      - name: Prepare release of remaining libs
-        run: npx nx run-many --target=prepare-release --projects=angular,angular-charts,react,react-charts --baseBranch='main' --origin='origin' --parallel=1
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           HUSKY: 0
