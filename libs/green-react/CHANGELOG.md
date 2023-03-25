@@ -2,6 +2,10 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.3.14](https://github.com/IsogramAB/green/compare/@sebgroup/green-react@1.3.13...@sebgroup/green-react@1.3.14) (2023-03-25)
+
+
+
 ## [1.3.13](https://github.com/IsogramAB/green/compare/@sebgroup/green-react@1.3.12...@sebgroup/green-react@1.3.13) (2023-03-25)
 
 ### Dependency Updates
