@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.2.13](https://github.com/IsogramAB/green/compare/@sebgroup/green-angular@1.2.12...@sebgroup/green-angular@1.2.13) (2023-03-25)
+
+### Dependency Updates
+
+* `chlorophyll` updated to version `1.5.6`
+* `extract` updated to version `1.22.0`
+
+
 ## [1.2.12](https://github.com/splashdust/green/compare/@sebgroup/green-angular@1.2.11...@sebgroup/green-angular@1.2.12) (2023-03-24)
 
 ### Dependency Updates
