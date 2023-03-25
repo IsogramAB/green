@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [1.25.0](https://github.com/IsogramAB/green/compare/@sebgroup/extract@1.24.0...@sebgroup/extract@1.25.0) (2023-03-25)
+
+
+### Features
+
+* new change ([b685235](https://github.com/IsogramAB/green/commit/b685235e449c7b3977905ca1a1eb8da4d3e1af6c))
+* test ([16476e0](https://github.com/IsogramAB/green/commit/16476e0557470969c1890ad3fb901bfde941d8fb))
+
+
+
 # [1.24.0](https://github.com/IsogramAB/green/compare/@sebgroup/extract@1.23.0...@sebgroup/extract@1.24.0) (2023-03-25)
 
 
