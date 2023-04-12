@@ -1,0 +1,21 @@
+name: Pull Request Summary
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  generate_summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Generate pull request summary
+        uses: splashdust/gh-action-pr-gpt-bot@1.0.0-beta.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          openaiApiKey: ${{ secrets.OPENAI_API_KEY }}
+          openaiOrgId: ${{ secrets.OPENAI_ORG_ID }}
