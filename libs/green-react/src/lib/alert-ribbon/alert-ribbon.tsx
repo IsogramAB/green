@@ -52,6 +52,7 @@ export function AlertRibbon({
   const renderIcon = () => {
     switch (type) {
       case 'danger':
+        return <SquareExclamation aria-hidden={true} />
       case 'warning':
         return <SquareExclamation aria-hidden={true} />
       case 'success':
