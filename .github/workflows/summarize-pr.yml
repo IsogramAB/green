@@ -19,4 +19,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           openaiApiKey: ${{ secrets.OPENAI_API_KEY }}
           openaiOrgId: ${{ secrets.OPENAI_ORG_ID }}
-          githubContext: ${{ toJson(github) }}
+          githubEvent: ${{ toJson(github.event) }}
