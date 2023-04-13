@@ -7,6 +7,8 @@
 .sg-date {
   // add base styles for calendar
   @include mixins.calendar;
+
+  padding: 5rem;
 }
 
 .popover-datepicker {
